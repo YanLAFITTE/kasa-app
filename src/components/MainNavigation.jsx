@@ -1,16 +1,9 @@
 import { NavLink } from "react-router-dom";
+import classes from "./MainNavigation.module.css";
 
 export default function MainNavigation() {
   return (
-    <header
-      style={{
-        borderBottom: "solid 1px",
-        padding: "1em",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
+    <header className={classes.header}>
       <NavLink to="/">
         <h1>KAZA</h1>
       </NavLink>

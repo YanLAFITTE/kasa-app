@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import About from "./routes/About";
 import RentalDetailsPage from "./routes/RentalDetailsPage";
-import RootLayout from "./components/RootLayout";
+import RootLayout from "./routes/RootLayout";
 
 export default function App() {
   return (

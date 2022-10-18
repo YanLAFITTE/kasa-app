@@ -1,0 +1,24 @@
+.cardContainer {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #F7F7F7;
+    margin: 1em;
+    border-radius: 10px;
+}
+.card{
+    margin: auto;
+    padding: 10px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ff6060;
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+}
+.cardTitle {
+    color: white;
+}

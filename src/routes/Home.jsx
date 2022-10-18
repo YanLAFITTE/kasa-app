@@ -1,5 +1,6 @@
 import { getRentals } from "../util/rentalsData";
-import Banner from "../components/Banner";
+import Banner from "../components/homeBanner";
+import Card from "../components/Card";
 
 export default function Home() {
   let getRentalsData = getRentals();
@@ -7,6 +8,7 @@ export default function Home() {
   return (
     <div>
       <Banner />
+      <Card />
     </div>
   );
 }

@@ -6,7 +6,7 @@ export default function RootLayout() {
   return (
     <>
       <MainNavigation />
-      <main style={{ height: "80vh" }}>
+      <main>
         <Outlet />
       </main>
       <Footer />

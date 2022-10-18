@@ -1,0 +1,19 @@
+.banner {
+  padding: 0 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageBanner {
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  border-radius: 10px;
+}
+.textBanner {
+  color: #ffffff;
+  position: absolute;
+  font-weight: 500;
+}

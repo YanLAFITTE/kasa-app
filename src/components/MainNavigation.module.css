@@ -1,7 +1,16 @@
 .header {
-  border-bottom: solid 1px;
   padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.headerImg {
+  width: 5rem;
+}
+
+.headerNavLink {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 10px;
 }

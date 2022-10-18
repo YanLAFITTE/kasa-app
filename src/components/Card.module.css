@@ -1,24 +1,35 @@
 .cardContainer {
-  padding: 1em;
+  padding: 56px 50px;
   background-color: var(--clr-tertiary);
-  margin: 1em;
+  margin: 43px 0;
   border-radius: 10px;
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 60px;
   justify-content: space-around;
 }
 .card {
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--clr-secondary);
-  height: 120px;
-  width: 120px;
+  background: linear-gradient(
+    180deg,
+    var(--clr-secondary) 60%,
+    rgba(0, 0, 0, 0.9) 140%
+  );
+  height: 340px;
+  width: 340px;
   border-radius: 10px;
 }
+
+.cardImg {
+  height: 220px;
+  border-radius: 10px 10px 0 0;
+}
+
 .cardTitle {
-  font-size: 12px;
+  font-size: 18px;
+  font-weight: 500;
   color: var(--clr-primary);
 }

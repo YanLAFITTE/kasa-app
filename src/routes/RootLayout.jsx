@@ -6,7 +6,7 @@ export default function RootLayout() {
   return (
     <>
       <MainNavigation />
-      <main>
+      <main style={{ maxWidth: "1240px", margin: "auto", padding: "0 100px" }}>
         <Outlet />
       </main>
       <Footer />

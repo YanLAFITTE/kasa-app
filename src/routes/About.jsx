@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main style={{ padding: "1rem 0" }}>
+    <main>
       <h2>Page A Propos</h2>
     </main>
   );

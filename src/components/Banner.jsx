@@ -1,5 +1,5 @@
 import imgBanner from "../assets/img-banner.png";
-import classes from "./homeBanner.module.css";
+import classes from "./Banner.module.css";
 
 export default function Banner() {
   return (

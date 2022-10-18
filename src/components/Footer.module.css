@@ -1,4 +1,4 @@
 .footer {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--clr-quaternary);
+  color: var(--clr-primary);
 }

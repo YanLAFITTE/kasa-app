@@ -1,4 +1,4 @@
-import imgBanner from "../assets/img-banner.png";
+import imgBanner from "../assets/banner-home.png";
 import classes from "./Banner.module.css";
 
 export default function Banner() {

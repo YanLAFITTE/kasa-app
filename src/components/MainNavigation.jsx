@@ -1,19 +1,31 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import logoHeader from "../assets/logo-header.png";
 
 export default function MainNavigation() {
   return (
     <header className={classes.header}>
-      <NavLink to="/">
+      <Link to="/">
         <img className={classes.headerImg} src={logoHeader} alt="logo" />
-      </NavLink>
+      </Link>
       <div>
-        <nav>
-          <NavLink className={classes.headerNavLink} to="/">
+        <nav className={classes.nav}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? classes.active : undefined
+            }
+            end
+            to="/"
+          >
             Accueil
           </NavLink>
-          <NavLink className={classes.headerNavLink} to="/about">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? classes.active : undefined
+            }
+            end
+            to="/about"
+          >
             A propos
           </NavLink>
         </nav>

@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1240px;
   margin: auto;
 }
 
@@ -12,9 +11,15 @@
   width: 210px;
 }
 
-.headerNavLink {
+.nav a {
   padding-left: 57px;
   color: inherit;
   font-weight: 500;
   font-size: 24px;
+}
+
+.nav a:hover,
+.nav a:active,
+.nav a.active {
+  text-decoration: underline;
 }

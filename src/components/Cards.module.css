@@ -3,10 +3,11 @@
   background-color: var(--clr-tertiary);
   margin: 43px 0;
   border-radius: 10px;
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
+  justify-content:space-around;
   gap: 60px;
-  justify-content: space-around;
+ 
 }
 .card {
   padding: 20px;
@@ -24,11 +25,12 @@
 }
 
 .cardImg {
-  height: 220px;
+  height: 210px;
   border-radius: 10px 10px 0 0;
 }
 
 .cardTitle {
+  padding: 20px 0;
   font-size: 18px;
   font-weight: 500;
   color: var(--clr-primary);

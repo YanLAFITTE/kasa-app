@@ -1,7 +1,7 @@
-import classes from "./Card.module.css";
+import classes from "./Cards.module.css";
 import { Link } from "react-router-dom";
 
-export default function Card(props) {
+ const Card = (props) => {
   const cardsElements = props.cards.map((card) => (
     <Link key={card.id} to={card.id.toString()}>
       <div className={classes.card}>
@@ -12,3 +12,5 @@ export default function Card(props) {
   ));
   return <div className={classes.cardContainer}>{cardsElements}</div>;
 }
+
+export default Card;

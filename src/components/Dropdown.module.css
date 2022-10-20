@@ -1,7 +1,8 @@
 .dropdown {
-  margin: 33px 0;
+  margin: 33px auto;
   background-color: var(--clr-tertiary);
   border-radius: 5px;
+  max-width: 1023px;
 }
 
 .btn {
@@ -18,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .p {

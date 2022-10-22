@@ -14,7 +14,7 @@ export default function App() {
           <Route path=":id" element={<RentalDetailsPage />} />
           <Route path="/about" element={<About />} />
         </Route>
-          <Route path="/*" element={<ErrorPage />}></Route>
+        <Route path="/*" element={<ErrorPage />}></Route>
       </Routes>
     </BrowserRouter>
   );

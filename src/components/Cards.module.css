@@ -1,12 +1,13 @@
 .cardContainer {
   padding: 56px 50px;
   background-color: var(--clr-tertiary);
-  margin: 43px 0;
+  margin: 43px auto;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 5%;
+  max-width: 1240px;
 }
 .card {
   padding: 20px;

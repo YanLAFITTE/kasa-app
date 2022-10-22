@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getRentals } from "../util/rentalsData";
+import { getRentals } from "../util/rentalsData.js";
 import Banner from "../components/Banner";
 import Cards from "../components/Cards";
 import homeBanner from "../assets/banner-home.png";
@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <>
-      <Banner banner={homeBanner} text={true}/>
+      <Banner banner={homeBanner} text={true} />
       {isLoading && (
         <p style={{ textAlign: "center", padding: "2rem" }}>Loading...</p>
       )}

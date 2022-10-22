@@ -1,31 +1,31 @@
 .errorContainer {
-    max-width: 1240px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
 }
 
 .title {
-    font-size: 288px;
-    font-weight: 700;
-    line-height:  411px;
-    padding-bottom: 66px;
-    padding-top: 66px;
+  font-size: 288px;
+  font-weight: 700;
+  line-height: 411px;
+  padding-bottom: 66px;
+  padding-top: 66px;
 }
 
 .paragraph {
-    font-size: 36px;
-    font-weight: 500;
-    line-height:  51px ;
-    padding-bottom: 182px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51px;
+  padding-bottom: 182px;
 }
 
 .link {
-    padding-bottom: 159px;
-    color: inherit;
-    text-decoration: underline;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 26px;
+  padding-bottom: 159px;
+  color: inherit;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
 }

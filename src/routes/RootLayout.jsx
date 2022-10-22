@@ -4,13 +4,12 @@ import { Outlet } from "react-router-dom";
 
 export default function RootLayout() {
   return (
-
-   <div>
+    <>
       <MainNavigation />
-      <main style={{padding: "0 100px"}}>
+      <main style={{ padding: "0 100px" }}>
         <Outlet />
       </main>
       <Footer />
-    </div >
-  )
+    </>
+  );
 }

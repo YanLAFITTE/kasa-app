@@ -23,6 +23,10 @@
     cursor: pointer;
     user-select: none;
 }
+.leftArrow:hover {
+    color: var(--clr-secondary);
+    transition: ease-out 150ms;
+}
 
 .rigthArrow {
     position: absolute;
@@ -33,6 +37,11 @@
     z-index: 10;
     cursor: pointer;
     user-select: none;
+}
+
+.rigthArrow:hover {
+    color: var(--clr-secondary);
+    transition: ease-out 150ms;
 }
 
 .slide {

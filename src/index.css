@@ -1,18 +1,18 @@
 /* Custom Properties */
 
 :root {
-  --clr-primary: #ffffff;
-  --clr-secondary: #ff6060;
-  --clr-tertiary: #f7f7f7;
-  --clr-quaternary: #000000;
-  --clr-star: #e3e3e3;
-  --ff-main: Montserrat, Avenir, Helvetica, Arial, sans-serif;
+    --clr-primary: #ffffff;
+    --clr-secondary: #ff6060;
+    --clr-tertiary: #f7f7f7;
+    --clr-quaternary: #000000;
+    --clr-star: #e3e3e3;
+    --ff-main: Montserrat, Avenir, Helvetica, Arial, sans-serif;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 /* Reset */
@@ -20,38 +20,38 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 ul,
 li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 /* remove animations for people who've turned them off */
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* Typography */
 
 html {
-  font-family: var(--ff-main);
-  color: var(--clr-secondary);
+    font-family: var(--ff-main);
+    color: var(--clr-secondary);
 }

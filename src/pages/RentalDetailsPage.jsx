@@ -49,7 +49,7 @@ export default function RentalDetailsPage() {
             {rentals.error && <p>{rentals.error}</p>}
             {!rentals.error && currentRental && (
                 <div>
-                    <ImagesSlider slides={currentRental.pictures} />
+                    <ImagesSlider slides={currentRental.pictures}  />
                     <div className={classes.rentalInfos}>
                         <div className={classes.rentalInfosRight}>
                             <div>

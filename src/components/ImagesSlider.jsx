@@ -19,11 +19,18 @@ const ImagesSlider = (props) => {
 
     return (
         <section className={classes.slider}>
-            <MdArrowBackIos className={classes.leftArrow} onClick={prevSlide} />
-            <MdArrowForwardIos
-                className={classes.rigthArrow}
-                onClick={nextSlide}
-            />
+            {length > 1 && (
+                <MdArrowBackIos
+                    className={classes.leftArrow}
+                    onClick={prevSlide}
+                />
+            )}
+            {length > 1 && (
+                <MdArrowForwardIos
+                    className={classes.rigthArrow}
+                    onClick={nextSlide}
+                />
+            )}
             {props.slides.map((slide, index) => {
                 return (
                     <div
@@ -42,6 +49,11 @@ const ImagesSlider = (props) => {
                     </div>
                 );
             })}
+            {length > 1 && current < length && (
+                <div className={classes.index}>
+                    {current + 1}/{length}
+                </div>
+            )}
         </section>
     );
 };

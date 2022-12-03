@@ -16,9 +16,31 @@ const ImagesSlider = (props) => {
     if (!Array.isArray(props.slides) || props.slides.length <= 0) {
         return null;
     }
+    console.log(props.slides);
+    console.log(current);
+    let bulletElements;
+    if (current >= 0) {
+        bulletElements = props.slides.map((slide, index) => (
+            <span
+                className={
+                    index === current
+                        ? classes.sliderBullets
+                        : classes.sliderBulletActive
+                }
+                key={index}
+            ></span>
+        ));
+    }
 
+    console.log(length);
     return (
         <section className={classes.slider}>
+            {props.currentRental.isLoading && (
+                <p style={{ textAlign: 'center', padding: '2rem' }}>
+                    Loading...
+                </p>
+            )}
+            {props.currentRental.error && <p>{props.currentRental.error}</p>}
             {length > 1 && (
                 <MdArrowBackIos
                     className={classes.leftArrow}
@@ -49,10 +71,8 @@ const ImagesSlider = (props) => {
                     </div>
                 );
             })}
-            {length > 1 && current < length && (
-                <div className={classes.index}>
-                    {current + 1}/{length}
-                </div>
+            {length > 1 && (
+                <div className={classes.index}>{bulletElements}</div>
             )}
         </section>
     );

@@ -16,11 +16,17 @@ const About = () => {
                 </p>
             )}
             {about.error && <p>{about.error}</p>}
-           {about.data && <div>
-                {about.data.map((data, index) => (
-                    <Dropdown key={index} title={data.title} text={data.text} />
-                ))}
-            </div>}
+            {about.data && (
+                <div>
+                    {about.data.map((data, index) => (
+                        <Dropdown
+                            key={index}
+                            title={data.title}
+                            text={data.text}
+                        />
+                    ))}
+                </div>
+            )}
         </>
     );
 };

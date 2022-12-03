@@ -11,12 +11,8 @@ export default function App() {
             <Routes>
                 <Route exact path='/' element={<RootLayout />}>
                     <Route index element={<Home />} />
-                    <Route
-                        exact
-                        path='/rental/:id'
-                        element={<RentalDetailsPage />}
-                    />
-                    <Route exact path='/about' element={<About />} />
+                    <Route path='/rental/:id' element={<RentalDetailsPage />} />
+                    <Route path='/about' element={<About />} />
                 </Route>
                 <Route path='*' element={<ErrorPage />}></Route>
             </Routes>

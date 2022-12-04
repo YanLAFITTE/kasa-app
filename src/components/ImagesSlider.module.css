@@ -58,9 +58,9 @@
     display: flex;
     position: absolute;
     bottom: 5px;
-    right: 45%;
     left: 45%;
-    gap: 10%;
+    right: 45%;
+    gap: 5%;
     color: var(--clr-primary);
     font-size: 18px;
     font-family: 'Montserrat';
@@ -68,15 +68,17 @@
 }
 
 .sliderBullets {
-    width: 30px;
+   
+    width: 35px;
     height: 5px;
     background-color: var(--clr-secondary);
     border-radius: 5px;
 }
 
 .sliderBulletActive {
+   
     background-color: var(--clr-tertiary);
-    width: 30px;
+    width: 35px;
     height: 5px;
     border-radius: 5px;
 }

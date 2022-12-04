@@ -13,11 +13,10 @@ const ImagesSlider = (props) => {
         setCurrent(current === 0 ? length - 1 : current - 1);
     };
 
-    if (!Array.isArray(props.slides) || props.slides.length <= 0) {
+    if (!Array.isArray(props.slides) || length <= 0) {
         return null;
     }
-    console.log(props.slides);
-    console.log(current);
+
     let bulletElements;
     if (current >= 0) {
         bulletElements = props.slides.map((slide, index) => (
@@ -32,7 +31,6 @@ const ImagesSlider = (props) => {
         ));
     }
 
-    console.log(length);
     return (
         <section className={classes.slider}>
             {props.currentRental.isLoading && (

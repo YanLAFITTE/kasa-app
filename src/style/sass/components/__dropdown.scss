@@ -1,0 +1,36 @@
+@use '../abstract/_variables';
+
+.dropdown {
+    margin: 33px auto;
+    background-color: variables.$clr-tertiary;
+    border-radius: 5px;
+    max-width: 1023px;
+
+    .drop-btn {
+        background-color: variables.$clr-secondary;
+        width: 100%;
+        height: 47px;
+        color: variables.$clr-tertiary;
+        text-align: start;
+        padding-left: 18px;
+        font-size: 24px;
+        font-weight: 500;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        .drop-icon {
+            height: 24px;
+            margin-right: 24px;
+        }
+    }
+
+    .drop-p {
+        padding: 36px 18px 19px;
+        font-size: 24px;
+        font-weight: 400;
+    }
+}

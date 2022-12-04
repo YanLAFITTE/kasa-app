@@ -16,7 +16,11 @@ export default function Home() {
                 </p>
             )}
             {rentals.error && <p>{rentals.error}</p>}
-            {!rentals.error && rentals.data && <Cards cards={rentals.data} />}
+            <div className='cards-container'>
+                {!rentals.error && rentals.data && (
+                    <Cards cards={rentals.data} />
+                )}
+            </div>
         </>
     );
 }

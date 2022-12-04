@@ -1,7 +1,5 @@
 import ImagesSlider from '../components/ImagesSlider';
 import Dropdown from '../components/Dropdown';
-import classes from './RentalDetailsPage.module.css';
-
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../utils/useFetch';
 import { IoIosStar } from 'react-icons/io';
@@ -27,7 +25,7 @@ export default function RentalDetailsPage() {
     let tagElements;
     if (currentRental) {
         tagElements = tags.map((tag, index) => (
-            <span className={classes.tagInfos} key={index}>
+            <span className='tagInfos' key={index}>
                 {tag}
             </span>
         ));
@@ -53,32 +51,32 @@ export default function RentalDetailsPage() {
                         slides={currentRental.pictures}
                         currentRental={currentRental}
                     />
-                    <div className={classes.rentalInfos}>
-                        <div className={classes.rentalInfosRight}>
+                    <div className='rentalInfos'>
+                        <div className='rentalInfosRight'>
                             <div>
-                                <h1 className={classes.titleInfos}>
+                                <h1 className='titleInfos'>
                                     {currentRental.title}
                                 </h1>
-                                <h2 className={classes.locationInfos}>
+                                <h2 className='locationInfos'>
                                     {currentRental.location}
                                 </h2>
                             </div>
-                            <div className={classes.tagInfosContainer}>
+                            <div className='tagInfosContainer'>
                                 {tagElements}
                             </div>
                         </div>
-                        <div className={classes.rentalInfosLeft}>
-                            <div className={classes.nameImageInfos}>
-                                <h3 className={classes.nameInfos}>
+                        <div className='rentalInfosLeft'>
+                            <div className='nameImageInfos'>
+                                <h3 className='nameInfos'>
                                     {currentRental.host.name}
                                 </h3>
                                 <img
-                                    className={classes.imageInfos}
+                                    className='imageInfos'
                                     src={currentRental.host.picture}
                                     alt='avatar'
                                 />
                             </div>
-                            <div className={classes.starContainer}>
+                            <div className='starContainer'>
                                 {[...new Array(totalStars)].map(
                                     (arr, index) => {
                                         return (
@@ -86,8 +84,8 @@ export default function RentalDetailsPage() {
                                                 key={index}
                                                 className={
                                                     index < activeStars
-                                                        ? classes.starActive
-                                                        : classes.star
+                                                        ? 'starActive'
+                                                        : 'star'
                                                 }
                                             />
                                         );
@@ -96,14 +94,14 @@ export default function RentalDetailsPage() {
                             </div>
                         </div>
                     </div>
-                    <div className={classes.dropdownContainer}>
-                        <div className={classes.dropRentalDetailsPage}>
+                    <div className='dropdownContainer'>
+                        <div className='dropRentalDetailsPage'>
                             <Dropdown
                                 title={'Description'}
                                 text={currentRental.description}
                             />
                         </div>
-                        <div className={classes.dropRentalDetailsPage}>
+                        <div className='dropRentalDetailsPage'>
                             <Dropdown
                                 title={'Equipments'}
                                 equipements={currentRental.equipments}

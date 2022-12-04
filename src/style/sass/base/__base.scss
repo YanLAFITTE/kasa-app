@@ -1,12 +1,9 @@
+@use "../abstract/_variables";
+
+
 /* Custom Properties */
 
 :root {
-    --clr-primary: #ffffff;
-    --clr-secondary: #ff6060;
-    --clr-tertiary: #f7f7f7;
-    --clr-quaternary: #000000;
-    --clr-star: #e3e3e3;
-    --ff-main: Montserrat, Avenir, Helvetica, Arial, sans-serif;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -52,6 +49,6 @@ a {
 /* Typography */
 
 html {
-    font-family: var(--ff-main);
-    color: var(--clr-secondary);
+    font-family: variables.$ff-main;
+    color: variables.$clr-secondary;
 }

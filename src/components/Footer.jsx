@@ -1,11 +1,10 @@
 import logoFooter from '../assets/logo-footer.png';
-import classes from './Footer.module.css';
 
 export default function Footer() {
     return (
-        <footer className={classes.footer}>
-            <img className={classes.footerImg} src={logoFooter} alt='logo' />
-            <h3 className={classes.footerText}>
+        <footer className="footer">
+            <img className="footer-img" src={logoFooter} alt='logo' />
+            <h3 className="footer-text">
                 © 2022 Kasa. All rights reserved
             </h3>
         </footer>

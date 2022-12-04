@@ -1,0 +1,26 @@
+@use '../abstract/_variables';
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+
+    .image-banner {
+        height: 223px;
+        position: relative;
+        width: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+
+    .text-banner {
+        color: variables.$clr-primary;
+        position: absolute;
+        font-weight: 500;
+        font-size: 48px;
+        padding: 0 1rem;
+    }
+}

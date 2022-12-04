@@ -1,3 +1,5 @@
+@use '../abstract/_variables';
+
 .banner {
     border-radius: 50px;
 }
@@ -34,7 +36,7 @@
 
 .star {
     font-size: 28px;
-    color: var(--clr-star);
+    color: variables.$clr-star;
 }
 
 .starActive {
@@ -47,8 +49,8 @@
 }
 
 .tagInfos {
-    background-color: var(--clr-secondary);
-    color: var(--clr-primary);
+    background-color: variables.$clr-secondary;
+    color: variables.$clr-primary;
     padding: 2px 6px;
     border-radius: 25px;
     margin-right: 5px;

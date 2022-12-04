@@ -1,22 +1,21 @@
 import { NavLink, Link } from 'react-router-dom';
-import classes from './MainNavigation.module.css';
 import logoHeader from '../assets/logo-header.png';
 
 export default function MainNavigation() {
     return (
-        <header className={classes.header}>
+        <header className="header">
             <Link to='/'>
                 <img
-                    className={classes.headerImg}
+                    className="header-img"
                     src={logoHeader}
                     alt='logo'
                 />
             </Link>
             <div>
-                <nav className={classes.nav}>
+                <nav className="nav">
                     <NavLink
                         className={({ isActive }) =>
-                            isActive ? classes.active : undefined
+                            isActive ? "active" : undefined
                         }
                         end
                         to='/'
@@ -25,7 +24,7 @@ export default function MainNavigation() {
                     </NavLink>
                     <NavLink
                         className={({ isActive }) =>
-                            isActive ? classes.active : undefined
+                            isActive ? "active" : undefined
                         }
                         end
                         to='/about'

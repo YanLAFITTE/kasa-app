@@ -1,0 +1,13 @@
+@use '../abstract/_variables';
+
+.cards-container {
+    padding: 56px 50px;
+    background-color: variables.$clr-tertiary;
+    margin: 43px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5%;
+    max-width: 1240px;
+}

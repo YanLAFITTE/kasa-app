@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md';
-import classes from './ImagesSlider.module.css';
 
 const ImagesSlider = (props) => {
     const [current, setCurrent] = useState(0);
@@ -23,8 +22,8 @@ const ImagesSlider = (props) => {
             <span
                 className={
                     index === current
-                        ? classes.sliderBullets
-                        : classes.sliderBulletActive
+                        ? 'slider-bullets'
+                        : 'slider-bullet-active slider-bullets'
                 }
                 key={index}
             ></span>
@@ -32,7 +31,7 @@ const ImagesSlider = (props) => {
     }
 
     return (
-        <section className={classes.slider}>
+        <section className='slider'>
             {props.currentRental.isLoading && (
                 <p style={{ textAlign: 'center', padding: '2rem' }}>
                     Loading...
@@ -40,37 +39,32 @@ const ImagesSlider = (props) => {
             )}
             {props.currentRental.error && <p>{props.currentRental.error}</p>}
             {length > 1 && (
-                <MdArrowBackIos
-                    className={classes.leftArrow}
-                    onClick={prevSlide}
-                />
+                <MdArrowBackIos className='left-arrow' onClick={prevSlide} />
             )}
             {length > 1 && (
                 <MdArrowForwardIos
-                    className={classes.rigthArrow}
+                    className='rigth-arrow'
                     onClick={nextSlide}
                 />
             )}
             {props.slides.map((slide, index) => {
                 return (
                     <div
-                        className={
-                            index === current ? classes.active : classes.slide
-                        }
+                        className={index === current ? 'slide-active' : 'slide-inactive'}
                         key={index}
                     >
                         {index === current && (
                             <img
                                 src={slide}
                                 alt='slider'
-                                className={classes.image}
+                                className='slider-image'
                             />
                         )}
                     </div>
                 );
             })}
             {length > 1 && (
-                <div className={classes.index}>{bulletElements}</div>
+                <div className='slider-bullets-index'>{bulletElements}</div>
             )}
         </section>
     );

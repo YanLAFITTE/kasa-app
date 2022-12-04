@@ -1,4 +1,3 @@
-import classes from './Dropdown.module.css';
 import { IoChevronDown, IoChevronUp } from 'react-icons/io5';
 import { useState } from 'react';
 
@@ -9,15 +8,15 @@ const Dropdown = (props) => {
     };
 
     return (
-        <div className={classes.dropdown}>
-            <button className={classes.btn} onClick={handleOpen}>
+        <div className='dropdown'>
+            <button className='drop-btn' onClick={handleOpen}>
                 {props.title}
-                {!isOpen && <IoChevronDown className={classes.icon} />}
-                {isOpen && <IoChevronUp className={classes.icon} />}
+                {!isOpen && <IoChevronDown className='drop-icon' />}
+                {isOpen && <IoChevronUp className='drop-icon' />}
             </button>
-            {isOpen && props.text && <p className={classes.p}>{props.text}</p>}
+            {isOpen && props.text && <p className='drop-p'>{props.text}</p>}
             {isOpen && props.equipements && (
-                <ul className={classes.p}>
+                <ul className='drop-p'>
                     {props.equipements.map((equipment, index) => (
                         <li key={index}>{equipment}</li>
                     ))}

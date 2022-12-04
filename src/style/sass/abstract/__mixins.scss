@@ -1,0 +1,5 @@
+@use '../abstract/_variables';
+
+@mixin card-shadow {
+    box-shadow: 0 4px 10px variables.$card-shadow;
+}

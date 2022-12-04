@@ -1,13 +1,29 @@
 @use '../abstract/_variables';
 
 .cards-container {
-    padding: 56px 50px;
+    padding: 30px 20px 40px;
     background-color: variables.$clr-tertiary;
-    margin: 43px auto;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 5%;
-    max-width: 1240px;
+    flex-basis: 50%;
+    @media #{variables.$small-up} {
+        margin: 50px 20px 50px;
+        border-radius: 20px;
+    }
+    @media #{variables.$xlscreen-up} {
+        margin: 50px;
+    }
+}
+
+.cards {
+    @media #{variables.$medium-up} {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+        column-gap: 4%;
+    }
+    @media #{variables.$large-up} {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media #{variables.$xlscreen-up} {
+        padding: 2% 4%;
+    }
 }

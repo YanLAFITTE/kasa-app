@@ -6,3 +6,24 @@ $clr-tertiary: #f7f7f7;
 $clr-quaternary: #000000;
 $clr-star: #e3e3e3;
 $ff-main: Montserrat, Avenir, Helvetica, Arial, sans-serif;
+
+$card-shadow: lighten($clr-quaternary, 65%);
+
+// MEDIA-QUERIES =========
+
+$small: 480px;
+$medium: 768px;
+$large: 992px;
+$xlscreen: 1440px;
+$xxlscreen: 1680px;
+
+$small-up: 'only screen  and (min-width: #{$small})';
+$small-down: 'only screen  and (max-width: #{$small})';
+$medium-up: 'only screen  and (min-width: #{$medium})';
+$medium-down: 'only screen  and (max-width: #{$medium})';
+$large-up: 'only screen  and (min-width: #{$large})';
+$large-down: 'only screen  and (max-width: #{$large})';
+$xlscreen-up: 'only screen  and (min-width: #{$xlscreen})';
+$xlscreen-down: 'only screen  and (max-width: #{$xlscreen})';
+$xxlscreen-up: 'only screen  and (min-width: #{$xxlscreen})';
+$xxlscreen-down: 'only screen  and (max-width: #{$xxlscreen})';

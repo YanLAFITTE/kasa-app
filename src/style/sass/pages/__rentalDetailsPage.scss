@@ -1,74 +1,65 @@
 @use '../abstract/_variables';
 
-.banner {
-    border-radius: 50px;
-}
-
-.rentalInfos {
+.rental-infos {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+
+    .rental-infos-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .rental-infos-title {
+            padding-bottom: 15px;
+            padding-right: 15px;
+        }
+        .rental-infos-location {
+            font-size: 25px;
+        }
+        .tag-infos {
+            background-color: variables.$clr-secondary;
+            color: variables.$clr-primary;
+            padding: 2px 6px;
+            border-radius: 25px;
+            margin-right: 5px;
+            margin-top: 5px;
+            display: inline-block;
+        }
+    }
+    .rental-infos-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .name-image-infos {
+            display: flex;
+            align-items: center;
+            .name-infos {
+                padding-right: 15px;
+                text-align: end;
+            }
+            .image-infos {
+                border-radius: 50%;
+            }
+        }
+    }
 }
 
-.rentalInfosLeft {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.nameImageInfos {
-    display: flex;
-    align-items: center;
-}
-
-.nameInfos {
-    padding-right: 15px;
-    text-align: end;
-}
-
-.imageInfos {
-    border-radius: 50%;
-}
-
-.starContainer {
+.star-container {
     padding-top: 15px;
+    .star {
+        font-size: 28px;
+        color: variables.$clr-star;
+    }
+
+    .star-active {
+        font-size: 28px;
+    }
 }
 
-.star {
-    font-size: 28px;
-    color: variables.$clr-star;
-}
-
-.starActive {
-    font-size: 28px;
-}
-
-.titleInfos {
-    padding-bottom: 15px;
-    padding-right: 15px;
-}
-
-.tagInfos {
-    background-color: variables.$clr-secondary;
-    color: variables.$clr-primary;
-    padding: 2px 6px;
-    border-radius: 25px;
-    margin-right: 5px;
-    margin-top: 5px;
-    display: inline-block;
-}
-
-.rentalInfosRight {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.dropdownContainer {
+.drop-rental-container {
     display: flex;
     gap: 60px;
-}
-
-.dropRentalDetailsPage {
-    width: 50%;
+    .drop-rental {
+        width: 50%;
+    }
 }

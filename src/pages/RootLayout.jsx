@@ -6,7 +6,7 @@ export default function RootLayout() {
     return (
         <>
             <MainNavigation />
-            <main className='layout'>
+            <main className='layout-main'>
                 <Outlet />
             </main>
             <Footer />

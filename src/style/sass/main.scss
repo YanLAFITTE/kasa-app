@@ -1,19 +1,20 @@
-@use './base/_base';
-
 @use './vendor/_normalize';
 
 @use './abstract/_variables';
+@use './abstract/_mixins';
 
+@use './base/_base';
+
+@use './layout/_rootlayout';
+@use './layout/_mainNavigation';
 @use './layout/_footer';
 
-@use './layout/_mainNavigation';
+@use './pages/_home';
+@use './pages/_rentalDetailsPage';
+@use './pages/_errorPage';
 
 @use './components/_banner';
 @use './components/_cards';
 @use './components/_dropdown';
 @use './components/_imageSlider';
 
-@use './pages/_home';
-@use './pages/_errorPage';
-@use './pages/_rentalDetailsPage';
-@use './pages/_rootlayout';

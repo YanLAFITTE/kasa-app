@@ -25,7 +25,7 @@ export default function RentalDetailsPage() {
     let tagElements;
     if (currentRental) {
         tagElements = tags.map((tag, index) => (
-            <span className='tagInfos' key={index}>
+            <span className='tag-infos' key={index}>
                 {tag}
             </span>
         ));
@@ -51,32 +51,32 @@ export default function RentalDetailsPage() {
                         slides={currentRental.pictures}
                         currentRental={currentRental}
                     />
-                    <div className='rentalInfos'>
-                        <div className='rentalInfosRight'>
+                    <div className='rental-infos'>
+                        <div className='rental-infos-right'>
                             <div>
-                                <h1 className='titleInfos'>
+                                <h1 className='rental-infos-title'>
                                     {currentRental.title}
                                 </h1>
-                                <h2 className='locationInfos'>
+                                <h2 className='rental-infos-location'>
                                     {currentRental.location}
                                 </h2>
                             </div>
-                            <div className='tagInfosContainer'>
+                            <div className='tag-infos-container'>
                                 {tagElements}
                             </div>
                         </div>
-                        <div className='rentalInfosLeft'>
-                            <div className='nameImageInfos'>
-                                <h3 className='nameInfos'>
+                        <div className='rental-infos-left'>
+                            <div className='name-image-infos'>
+                                <h3 className='name-infos'>
                                     {currentRental.host.name}
                                 </h3>
                                 <img
-                                    className='imageInfos'
+                                    className='image-infos'
                                     src={currentRental.host.picture}
                                     alt='avatar'
                                 />
                             </div>
-                            <div className='starContainer'>
+                            <div className='star-container'>
                                 {[...new Array(totalStars)].map(
                                     (arr, index) => {
                                         return (
@@ -84,7 +84,7 @@ export default function RentalDetailsPage() {
                                                 key={index}
                                                 className={
                                                     index < activeStars
-                                                        ? 'starActive'
+                                                        ? 'star-active'
                                                         : 'star'
                                                 }
                                             />
@@ -94,14 +94,14 @@ export default function RentalDetailsPage() {
                             </div>
                         </div>
                     </div>
-                    <div className='dropdownContainer'>
-                        <div className='dropRentalDetailsPage'>
+                    <div className='drop-rental-container'>
+                        <div className='drop-rental'>
                             <Dropdown
                                 title={'Description'}
                                 text={currentRental.description}
                             />
                         </div>
-                        <div className='dropRentalDetailsPage'>
+                        <div className='drop-rental'>
                             <Dropdown
                                 title={'Equipments'}
                                 equipements={currentRental.equipments}

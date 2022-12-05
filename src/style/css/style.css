@@ -405,9 +405,8 @@ html {
 }
 
 .cards-container {
-  padding: 30px 20px 40px;
+  padding: 50px 20px 10%;
   background-color: #f7f7f7;
-  flex-basis: 50%;
 }
 @media only screen and (min-width: 480px) {
   .cards-container {
@@ -425,7 +424,7 @@ html {
   .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 20px;
+    padding: 0 20px 35%;
     column-gap: 5%;
     row-gap: 1%;
   }
@@ -433,6 +432,7 @@ html {
 @media only screen and (min-width: 992px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
+    padding: 0 20px 10%;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -561,7 +561,6 @@ html {
   position: relative;
   border-radius: 15px;
   background-color: #ff6060;
-  box-shadow: 0 4px 10px #a6a6a6;
 }
 @media only screen and (min-width: 480px) {
   .card {
@@ -574,11 +573,13 @@ html {
   object-position: center;
   object-fit: cover;
   border-radius: 15px;
-  filter: brightness(80%);
-  transition: ease-out;
+  filter: brightness(95%);
+  transition: ease-out 100ms;
 }
 .card .card-img:hover {
   opacity: 0.8;
+  filter: brightness(110%);
+  box-shadow: 0 4px 10px #a6a6a6;
 }
 .card .card-title {
   position: absolute;
@@ -587,7 +588,7 @@ html {
   bottom: 10px;
   left: 10px;
   margin: auto 0 auto;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #ffffff;
 }
@@ -635,6 +636,7 @@ html {
   height: 415px;
   border-radius: 10px;
   object-fit: cover;
+  filter: brightness(105%);
 }
 .slider .left-arrow {
   position: absolute;

@@ -1,9 +1,9 @@
 @use '../abstract/_variables';
 
 .cards-container {
-    padding: 30px 20px 40px;
+    padding: 50px 20px 10%;
     background-color: variables.$clr-tertiary;
-    flex-basis: 50%;
+
     @media #{variables.$small-up} {
         margin: 50px 20px 50px;
         border-radius: 20px;
@@ -17,12 +17,13 @@
     @media #{variables.$medium-up} {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: 0 20px;
+        padding: 0 20px 35%;
         column-gap: 5%;
         row-gap: 1%;
     }
     @media #{variables.$large-up} {
         grid-template-columns: repeat(3, 1fr);
+        padding: 0 20px 10%;
     }
     @media #{variables.$xlscreen-up} {
         padding: 2% 4%;

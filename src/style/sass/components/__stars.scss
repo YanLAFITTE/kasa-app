@@ -1,0 +1,10 @@
+@use '../abstract/_variables';
+
+.star {
+    font-size: 28px;
+    color: variables.$clr-star;
+}
+
+.star-active {
+    font-size: 28px;
+}

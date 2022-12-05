@@ -2,7 +2,8 @@ import ImagesSlider from '../components/ImagesSlider';
 import Dropdown from '../components/Dropdown';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../utils/useFetch';
-import { IoIosStar } from 'react-icons/io';
+import Tags from '../components/Tags';
+import Stars from '../components/Stars';
 
 export default function RentalDetailsPage() {
     const { id } = useParams();
@@ -15,26 +16,6 @@ export default function RentalDetailsPage() {
 
     if (currentRental) {
         document.title = '- KASA - ' + currentRental.title;
-    }
-
-    let tags;
-    if (currentRental) {
-        tags = currentRental.tags;
-    }
-
-    let tagElements;
-    if (currentRental) {
-        tagElements = tags.map((tag, index) => (
-            <span className='tag-infos' key={index}>
-                {tag}
-            </span>
-        ));
-    }
-
-    const totalStars = 5;
-    let activeStars;
-    if (currentRental) {
-        activeStars = currentRental.rating;
     }
 
     return (
@@ -62,7 +43,7 @@ export default function RentalDetailsPage() {
                                 </h2>
                             </div>
                             <div className='tag-infos-container'>
-                                {tagElements}
+                                <Tags currentRental={currentRental} />
                             </div>
                         </div>
                         <div className='rental-infos-left'>
@@ -77,20 +58,7 @@ export default function RentalDetailsPage() {
                                 />
                             </div>
                             <div className='star-container'>
-                                {[...new Array(totalStars)].map(
-                                    (arr, index) => {
-                                        return (
-                                            <IoIosStar
-                                                key={index}
-                                                className={
-                                                    index < activeStars
-                                                        ? 'star-active'
-                                                        : 'star'
-                                                }
-                                            />
-                                        );
-                                    }
-                                )}
+                                <Stars currentRental={currentRental} />
                             </div>
                         </div>
                     </div>

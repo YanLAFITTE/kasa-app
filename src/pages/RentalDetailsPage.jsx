@@ -5,7 +5,12 @@ import Dropdown from '../components/Dropdown';
 import Tags from '../components/Tags';
 import Stars from '../components/Stars';
 
-export default function RentalDetailsPage() {
+/**
+ *
+ * @returns  rental details page
+ */
+
+const RentalDetailsPage = () => {
     const loaderData = useLoaderData();
     const { id } = useParams();
     const currentRental = loaderData.find((el) => el.id === id);
@@ -29,7 +34,9 @@ export default function RentalDetailsPage() {
                         </h2>
                     </div>
                     <div className='tag-infos-container'>
-                        <Tags currentRental={currentRental} />
+                        {currentRental.tags.map((tag, index) => (
+                            <Tags tag={tag} key={index} />
+                        ))}
                     </div>
                 </div>
                 <div className='rental-infos-left'>
@@ -64,7 +71,9 @@ export default function RentalDetailsPage() {
             </div>
         </>
     );
-}
+};
+
+export default RentalDetailsPage;
 
 export function loader() {
     return fetch(window.location.origin + '/rentalsData.json');

@@ -2,7 +2,7 @@ import Footer from '../components/Footer';
 import MainNavigation from '../components/MainNavigation';
 import { Outlet } from 'react-router-dom';
 
-export default function RootLayout() {
+const RootLayout = () => {
     return (
         <>
             <MainNavigation />
@@ -12,4 +12,6 @@ export default function RootLayout() {
             <Footer />
         </>
     );
-}
+};
+
+export default RootLayout;

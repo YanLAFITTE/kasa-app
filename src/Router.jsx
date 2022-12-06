@@ -5,7 +5,7 @@ import {
     Route,
 } from 'react-router-dom';
 import Home, { loader as homeLoader } from './pages/Home';
-import About, {loader as aboutLoader} from './pages/About';
+import About, { loader as aboutLoader } from './pages/About';
 import ErrorPage from './pages/ErrorPage';
 import RentalDetailsPage, {
     loader as rentalLoader,
@@ -26,6 +26,8 @@ const router = createBrowserRouter(
     )
 );
 
-export default function Router() {
+const Router = () => {
     return <RouterProvider router={router} />;
-}
+};
+
+export default Router;

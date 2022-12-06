@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom';
 import MainNavigation from '../components/MainNavigation';
 
-export default function ErrorPage() {
+/**
+ *
+ * @returns  error page
+ */
+
+const ErrorPage = () => {
     return (
         <>
             <MainNavigation />
@@ -16,4 +21,6 @@ export default function ErrorPage() {
             </main>
         </>
     );
-}
+};
+
+export default ErrorPage;

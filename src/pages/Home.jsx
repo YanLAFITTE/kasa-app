@@ -4,7 +4,12 @@ import Banner from '../components/Banner';
 import Cards from '../components/Cards';
 import homeBanner from '../assets/banner-home.png';
 
-export default function Home() {
+/**
+ *
+ * @returns  home page
+ */
+
+const Home = () => {
     const loaderData = useLoaderData();
     document.title = '- KASA - Accueil';
 
@@ -18,7 +23,9 @@ export default function Home() {
             </section>
         </>
     );
-}
+};
+
+export default Home;
 
 export function loader() {
     return fetch(window.location.origin + '/rentalsData.json');

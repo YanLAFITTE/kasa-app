@@ -1,10 +1,17 @@
-export default function Tags({ currentRental }) {
-    const tags = currentRental.tags;
-    const tagElements = tags.map((tag, index) => (
-        <span className='tag-infos' key={index}>
-            {tag}
-        </span>
-    ));
+import PropTypes from 'prop-types';
 
-    return tagElements;
-}
+/**
+ *
+ * @param {*} props create tag component
+ * @returns tags
+ */
+
+const Tags = ({ tag }) => {
+    return <span className='tag-infos'>{tag}</span>;
+};
+
+Tags.propTypes = {
+    name: PropTypes.string,
+};
+
+export default Tags;

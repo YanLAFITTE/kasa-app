@@ -4,6 +4,11 @@ import aboutBanner from '../assets/banner-about.png';
 // import { useFetch } from '../utils/useFetch';
 import { useLoaderData } from 'react-router-dom';
 
+/**
+ *
+ * @returns  about page
+ */
+
 const About = () => {
     const loaderData = useLoaderData();
     document.title = '- KASA - A propos';

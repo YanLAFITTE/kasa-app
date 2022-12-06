@@ -1,4 +1,4 @@
-export default function Banner(props) {
+const Banner = (props) => {
     return (
         <div className='banner'>
             <img className='image-banner' src={props.banner} alt='banner' />
@@ -7,4 +7,6 @@ export default function Banner(props) {
             )}
         </div>
     );
-}
+};
+
+export default Banner;

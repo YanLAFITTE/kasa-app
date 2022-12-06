@@ -1,7 +1,7 @@
 import { NavLink, Link } from 'react-router-dom';
 import logoHeader from '../assets/logo-header.png';
 
-export default function MainNavigation() {
+const MainNavigation = () => {
     return (
         <header className='header'>
             <Link to='/'>
@@ -31,4 +31,6 @@ export default function MainNavigation() {
             </div>
         </header>
     );
-}
+};
+
+export default MainNavigation;

@@ -1,6 +1,6 @@
 import { IoIosStar } from 'react-icons/io';
 
-export default function Stars({ currentRental }) {
+const Stars = ({ currentRental }) => {
     const totalStars = 5;
     const activeStars = currentRental.rating;
     const starElements = [...new Array(totalStars)].map((arr, index) => {
@@ -13,4 +13,6 @@ export default function Stars({ currentRental }) {
     });
 
     return starElements;
-}
+};
+
+export default Stars;

@@ -3,19 +3,15 @@ import logoHeader from '../assets/logo-header.png';
 
 export default function MainNavigation() {
     return (
-        <header className="header">
+        <header className='header'>
             <Link to='/'>
-                <img
-                    className="header-img"
-                    src={logoHeader}
-                    alt='logo'
-                />
+                <img className='header-img' src={logoHeader} alt='logo' />
             </Link>
             <div>
-                <nav className="nav">
+                <nav className='nav'>
                     <NavLink
                         className={({ isActive }) =>
-                            isActive ? "active" : undefined
+                            isActive ? 'active' : undefined
                         }
                         end
                         to='/'
@@ -24,7 +20,7 @@ export default function MainNavigation() {
                     </NavLink>
                     <NavLink
                         className={({ isActive }) =>
-                            isActive ? "active" : undefined
+                            isActive ? 'active' : undefined
                         }
                         end
                         to='/about'

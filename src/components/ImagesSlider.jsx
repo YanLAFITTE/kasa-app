@@ -39,18 +39,26 @@ const ImagesSlider = (props) => {
             )}
             {props.currentRental.error && <p>{props.currentRental.error}</p>}
             {length > 1 && (
-                <MdArrowBackIos className='left-arrow' onClick={prevSlide} />
-            )}
-            {length > 1 && (
-                <MdArrowForwardIos
-                    className='rigth-arrow'
-                    onClick={nextSlide}
-                />
+                <>
+                    <MdArrowBackIos
+                        className='left-arrow'
+                        onClick={prevSlide}
+                    />
+
+                    <MdArrowForwardIos
+                        className='rigth-arrow'
+                        onClick={nextSlide}
+                    />
+                </>
             )}
             {props.slides.map((slide, index) => {
                 return (
                     <div
-                        className={index === current ? 'slide-active' : 'slide-inactive'}
+                        className={
+                            index === current
+                                ? 'slide-active'
+                                : 'slide-inactive'
+                        }
                         key={index}
                     >
                         {index === current && (

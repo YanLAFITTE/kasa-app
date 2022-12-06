@@ -12,9 +12,11 @@
         .rental-infos-title {
             padding-bottom: 15px;
             padding-right: 15px;
+            filter: contrast(110%);
         }
         .rental-infos-location {
             font-size: 25px;
+            filter: contrast(110%);
         }
     }
     .rental-infos-left {
@@ -27,6 +29,7 @@
             .name-infos {
                 padding-right: 15px;
                 text-align: end;
+                filter: contrast(110%);
             }
             .image-infos {
                 border-radius: 50%;

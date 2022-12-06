@@ -1,4 +1,4 @@
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logoHeader from '../assets/logo-header.png';
 
 /**
@@ -9,9 +9,10 @@ import logoHeader from '../assets/logo-header.png';
 const MainNavigation = () => {
     return (
         <header className='header'>
-            <Link to='/'>
-                <img className='header-img' src={logoHeader} alt='logo' />
-            </Link>
+            <h1>
+                <img className='header-img' src={logoHeader} alt='kasa' />
+            </h1>
+
             <div>
                 <nav className='nav'>
                     <NavLink

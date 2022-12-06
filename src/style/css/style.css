@@ -379,6 +379,7 @@ html {
   color: inherit;
   font-weight: 500;
   font-size: 24px;
+  filter: contrast(110%);
 }
 .header .nav a:hover,
 .header .nav a:active,
@@ -454,9 +455,11 @@ html {
 .rental-infos .rental-infos-right .rental-infos-title {
   padding-bottom: 15px;
   padding-right: 15px;
+  filter: contrast(110%);
 }
 .rental-infos .rental-infos-right .rental-infos-location {
   font-size: 25px;
+  filter: contrast(110%);
 }
 .rental-infos .rental-infos-left {
   display: flex;
@@ -470,6 +473,7 @@ html {
 .rental-infos .rental-infos-left .name-image-infos .name-infos {
   padding-right: 15px;
   text-align: end;
+  filter: contrast(110%);
 }
 .rental-infos .rental-infos-left .name-image-infos .image-infos {
   border-radius: 50%;
@@ -537,6 +541,7 @@ html {
   font-weight: 500;
   font-size: 48px;
   padding: 0 1rem;
+  filter: brightness(200%);
 }
 
 .card {
@@ -557,12 +562,12 @@ html {
   object-position: center;
   object-fit: cover;
   border-radius: 15px;
-  filter: brightness(95%);
+  filter: brightness(90%);
   transition: ease-out 100ms;
 }
 .card .card-img:hover {
-  opacity: 0.8;
-  filter: brightness(110%);
+  opacity: 0.9;
+  filter: brightness(95%);
   box-shadow: 0 4px 10px #a6a6a6;
 }
 .card .card-title {
@@ -575,6 +580,7 @@ html {
   font-size: 20px;
   font-weight: 600;
   color: #ffffff;
+  filter: brightness(140%);
 }
 
 .dropdown {
@@ -598,6 +604,7 @@ html {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  filter: contrast(110%);
 }
 .dropdown .drop-btn .drop-icon {
   height: 24px;
@@ -626,11 +633,12 @@ html {
   position: absolute;
   top: 12rem;
   left: 1.5rem;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffffff;
   z-index: 10;
   cursor: pointer;
   user-select: none;
+  filter: contrast(120%);
 }
 .slider .left-arrow:hover {
   color: #ff6060;
@@ -640,11 +648,12 @@ html {
   position: absolute;
   top: 12rem;
   right: 1.5rem;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffffff;
   z-index: 10;
   cursor: pointer;
   user-select: none;
+  filter: contrast(120%);
 }
 .slider .rigth-arrow:hover {
   color: #ff6060;
@@ -674,11 +683,13 @@ html {
 .slider .slider-bullets-index .slider-bullets {
   width: 35px;
   height: 5px;
-  background-color: #ff6060;
+  background-color: #ffffff;
   border-radius: 5px;
+  filter: contrast(120%);
 }
 .slider .slider-bullets-index .slider-bullet-active {
-  background-color: #f7f7f7;
+  background-color: #ff6060;
+  filter: contrast(120%);
 }
 
 .tag-infos {
@@ -689,6 +700,7 @@ html {
   margin-right: 5px;
   margin-top: 5px;
   display: inline-block;
+  filter: contrast(110%);
 }
 
 .star {

@@ -18,11 +18,12 @@
         position: absolute;
         top: 12rem;
         left: 1.5rem;
-        font-size: 3rem;
+        font-size: 4rem;
         color: variables.$clr-primary;
         z-index: 10;
         cursor: pointer;
         user-select: none;
+        filter: contrast(120%);
         &:hover {
             color: variables.$clr-secondary;
             transition: ease-out 150ms;
@@ -32,12 +33,12 @@
         position: absolute;
         top: 12rem;
         right: 1.5rem;
-        font-size: 3rem;
+        font-size: 4rem;
         color: variables.$clr-primary;
         z-index: 10;
         cursor: pointer;
         user-select: none;
-
+        filter: contrast(120%);
         &:hover {
             color: variables.$clr-secondary;
             transition: ease-out 150ms;
@@ -70,12 +71,14 @@
         .slider-bullets {
             width: 35px;
             height: 5px;
-            background-color: variables.$clr-secondary;
+            background-color: variables.$clr-primary;
             border-radius: 5px;
+            filter: contrast(120%);
         }
 
         .slider-bullet-active {
-            background-color: variables.$clr-tertiary;
+            background-color: variables.$clr-secondary;
+            filter: contrast(120%);
         }
     }
 }

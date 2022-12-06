@@ -17,11 +17,11 @@
         object-position: center;
         object-fit: cover;
         border-radius: 15px;
-        filter: brightness(95%);
+        filter: brightness(90%);
         transition: ease-out 100ms;
         &:hover {
-            opacity: 0.8;
-            filter: brightness(110%);
+            opacity: 0.9;
+            filter: brightness(95%);
             @include mixins.card-shadow;
         }
     }
@@ -36,5 +36,6 @@
         font-size: 20px;
         font-weight: 600;
         color: variables.$clr-primary;
+        filter: brightness(140%);
     }
 }

@@ -29,8 +29,8 @@ const ImagesSlider = ({ slides }) => {
             <span
                 className={
                     index === current
-                        ? 'slider-bullets'
-                        : 'slider-bullet-active slider-bullets'
+                        ? 'slider-bullet-active slider-bullets'
+                        : 'slider-bullets'
                 }
                 key={index}
             ></span>
@@ -73,7 +73,10 @@ const ImagesSlider = ({ slides }) => {
                 );
             })}
             {length > 1 && (
-                <div className='slider-bullets-index'>{bulletElements}</div>
+                <div className='slider-bullets-index'>
+                    {/* {current + 1}/{length} */}
+                    {bulletElements}
+                </div>
             )}
         </section>
     );

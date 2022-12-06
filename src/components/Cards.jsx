@@ -11,8 +11,8 @@ const Cards = ({ cards }) => {
     const cardsElements = cards.map((card) => (
         <Link key={card.id} to={`${card.id.toString()}`}>
             <div className='card'>
-                <img className='card-img' src={card.cover} alt='thumbnail' />
-                <h4 className='card-title'>{card.title}</h4>
+                <img className='card-img' src={card.cover} alt={card.id} />
+                <h3 className='card-title'>{card.title}</h3>
             </div>
         </Link>
     ));

@@ -11,7 +11,7 @@ const Banner = ({ banner, text }) => {
         <div className='banner'>
             <img className='image-banner' src={banner} alt='banner' />
             {text && (
-                <h3 className='text-banner'>Chez vous, partout et ailleurs</h3>
+                <h2 className='text-banner'>Chez vous, partout et ailleurs</h2>
             )}
         </div>
     );

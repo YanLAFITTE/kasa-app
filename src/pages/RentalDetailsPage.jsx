@@ -19,9 +19,7 @@ const RentalDetailsPage = () => {
 
     return (
         <>
-            <ImagesSlider
-                slides={currentRental.pictures}
-            />
+            <ImagesSlider slides={currentRental.pictures} />
             <div className='rental-infos'>
                 <div className='rental-infos-right'>
                     <div>

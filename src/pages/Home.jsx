@@ -1,4 +1,3 @@
-// import { useFetch } from '../utils/useFetch';
 import { useLoaderData } from 'react-router-dom';
 import Banner from '../components/Banner';
 import Cards from '../components/Cards';

@@ -11,7 +11,7 @@ const Tags = ({ tag }) => {
 };
 
 Tags.propTypes = {
-    name: PropTypes.string,
+    tag: PropTypes.string,
 };
 
 export default Tags;

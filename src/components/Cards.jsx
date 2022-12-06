@@ -1,7 +1,14 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const Card = (props) => {
-    const cardsElements = props.cards.map((card) => (
+/**
+ *
+ * @param {*} props create cards elemnts component
+ * @returns cards elemets
+ */
+
+const Cards = ({ cards }) => {
+    const cardsElements = cards.map((card) => (
         <Link key={card.id} to={`${card.id.toString()}`}>
             <div className='card'>
                 <img className='card-img' src={card.cover} alt='thumbnail' />
@@ -12,4 +19,8 @@ const Card = (props) => {
     return cardsElements;
 };
 
-export default Card;
+Cards.propTypes = {
+    cards: PropTypes.array.isRequired,
+};
+
+export default Cards;

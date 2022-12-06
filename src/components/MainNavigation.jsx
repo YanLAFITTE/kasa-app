@@ -1,6 +1,11 @@
 import { NavLink, Link } from 'react-router-dom';
 import logoHeader from '../assets/logo-header.png';
 
+/**
+ *
+ * @returns main navigation
+ */
+
 const MainNavigation = () => {
     return (
         <header className='header'>

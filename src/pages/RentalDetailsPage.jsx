@@ -21,7 +21,6 @@ const RentalDetailsPage = () => {
         <>
             <ImagesSlider
                 slides={currentRental.pictures}
-                currentRental={currentRental}
             />
             <div className='rental-infos'>
                 <div className='rental-infos-right'>
@@ -51,7 +50,7 @@ const RentalDetailsPage = () => {
                         />
                     </div>
                     <div className='star-container'>
-                        <Stars currentRental={currentRental} />
+                        <Stars rating={currentRental.rating} />
                     </div>
                 </div>
             </div>
@@ -64,8 +63,8 @@ const RentalDetailsPage = () => {
                 </div>
                 <div className='drop-rental'>
                     <Dropdown
-                        title={'Equipments'}
-                        equipements={currentRental.equipments}
+                        title={'Equipements'}
+                        equipments={currentRental.equipments}
                     />
                 </div>
             </div>

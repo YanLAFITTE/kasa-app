@@ -1,9 +1,16 @@
 import { useState } from 'react';
 import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md';
+import PropTypes from 'prop-types';
 
-const ImagesSlider = (props) => {
+/**
+ *
+ * @param {*} props create slider component
+ * @returns image slider
+ */
+
+const ImagesSlider = ({ slides }) => {
     const [current, setCurrent] = useState(0);
-    const length = props.slides.length;
+    const length = slides.length;
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1);
@@ -12,13 +19,13 @@ const ImagesSlider = (props) => {
         setCurrent(current === 0 ? length - 1 : current - 1);
     };
 
-    if (!Array.isArray(props.slides) || length <= 0) {
+    if (!Array.isArray(slides) || length <= 0) {
         return null;
     }
 
     let bulletElements;
     if (current >= 0) {
-        bulletElements = props.slides.map((slide, index) => (
+        bulletElements = slides.map((slide, index) => (
             <span
                 className={
                     index === current
@@ -32,12 +39,6 @@ const ImagesSlider = (props) => {
 
     return (
         <section className='slider'>
-            {props.currentRental.isLoading && (
-                <p style={{ textAlign: 'center', padding: '2rem' }}>
-                    Loading...
-                </p>
-            )}
-            {props.currentRental.error && <p>{props.currentRental.error}</p>}
             {length > 1 && (
                 <>
                     <MdArrowBackIos
@@ -51,7 +52,7 @@ const ImagesSlider = (props) => {
                     />
                 </>
             )}
-            {props.slides.map((slide, index) => {
+            {slides.map((slide, index) => {
                 return (
                     <div
                         className={
@@ -76,6 +77,10 @@ const ImagesSlider = (props) => {
             )}
         </section>
     );
+};
+
+ImagesSlider.propTypes = {
+    slides: PropTypes.array.isRequired,
 };
 
 export default ImagesSlider;

@@ -1,7 +1,14 @@
 import { IoChevronDown, IoChevronUp } from 'react-icons/io5';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const Dropdown = (props) => {
+/**
+ *
+ * @param {*} props create dropdown component
+ * @returns dropdown
+ */
+
+const Dropdown = ({ title, text, equipments }) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleOpen = () => {
         setIsOpen(!isOpen);
@@ -10,20 +17,26 @@ const Dropdown = (props) => {
     return (
         <div className='dropdown'>
             <button className='drop-btn' onClick={handleOpen}>
-                {props.title}
+                {title}
                 {!isOpen && <IoChevronDown className='drop-icon' />}
                 {isOpen && <IoChevronUp className='drop-icon' />}
             </button>
-            {isOpen && props.text && <p className='drop-p'>{props.text}</p>}
-            {isOpen && props.equipements && (
+            {isOpen && text && <p className='drop-p'>{text}</p>}
+            {isOpen && equipments && (
                 <ul className='drop-p'>
-                    {props.equipements.map((equipment, index) => (
+                    {equipments.map((equipment, index) => (
                         <li key={index}>{equipment}</li>
                     ))}
                 </ul>
             )}
         </div>
     );
+};
+
+Dropdown.propTypes = {
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string,
+    equipments: PropTypes.array,
 };
 
 export default Dropdown;

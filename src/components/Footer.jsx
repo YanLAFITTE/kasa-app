@@ -1,5 +1,10 @@
 import logoFooter from '../assets/logo-footer.png';
 
+/**
+ *
+ * @returns footer
+ */
+
 const Footer = () => {
     return (
         <footer className='footer'>

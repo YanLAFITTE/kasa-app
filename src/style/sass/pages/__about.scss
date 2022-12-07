@@ -1,0 +1,10 @@
+@use '../abstract/_variables';
+
+.about-drop-container {
+    max-width: 1024px;
+    margin: auto;
+    padding: 2rem 3rem;
+    @media #{variables.$medium-down} {
+        padding: 1rem;
+    }
+}

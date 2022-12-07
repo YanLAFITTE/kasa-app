@@ -1,22 +1,39 @@
+@use '../abstract/_variables';
+
 .header {
-    padding: 40px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    max-width: 1440px;
+    padding: 1rem;
+    max-width: 1240px;
+    @media #{variables.$medium-down} {
+        padding: 0 1rem;
+    }
 
     .header-img {
         height: 68px;
-        width: 210px;
+        @media #{variables.$medium-down} {
+            height: 47px;
+        }
+    }
+    .nav {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+        @media #{variables.$medium-down} {
+            gap: 1rem;
+        }
     }
 
     .nav a {
-        padding-left: 3rem;
         color: inherit;
         font-weight: 500;
         font-size: 24px;
         filter: contrast(110%);
+        @media #{variables.$medium-down} {
+            font-size: 18px;
+        }
     }
 
     .nav a:hover,

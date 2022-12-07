@@ -1,4 +1,6 @@
+@use '../abstract/_variables';
+
 .layout-main {
-    padding: 0 50px;
-    height: 100%;
+    max-width: 1240px;
+    margin: auto;
 }

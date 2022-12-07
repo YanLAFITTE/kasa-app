@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 const Banner = ({ banner, text }) => {
     return (
         <div className='banner'>
-            <img className='image-banner' src={banner} alt='banner' />
+            <img className={text ? 'home-banner-img' : 'about-banner-img'} src={banner} alt='banner' />
             {text && (
                 <h2 className='text-banner'>Chez vous, partout et ailleurs</h2>
             )}

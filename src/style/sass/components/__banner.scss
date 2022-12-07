@@ -5,15 +5,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1240px;
-    margin: auto;
+    padding: 1rem;
+    @media #{variables.$medium-down} {
+        margin: 0 1rem;
+        padding: 0;
+    }
 
-    .image-banner {
+    .home-banner-img,
+    .about-banner-img {
         height: 223px;
         position: relative;
         width: 100%;
         border-radius: 25px;
         object-fit: cover;
+    }
+    .home-banner-img {
+        @media #{variables.$large-down} {
+            height: 160px;
+        }
+        @media #{variables.$medium-down} {
+            height: 110px;
+            border-radius: 10px;
+        }
+    }
+
+    .about-banner-img {
+        @media #{variables.$medium-down} {
+            border-radius: 10px;
+        }
     }
 
     .text-banner {
@@ -21,7 +40,13 @@
         position: absolute;
         font-weight: 500;
         font-size: 48px;
-        padding: 0 1rem;
+        padding: 0 1.5rem;
         filter: brightness(200%);
+        @media #{variables.$large-down} {
+            font-size: 32px;
+        }
+        @media #{variables.$medium-down} {
+            font-size: 24px;
+        }
     }
 }

@@ -17,7 +17,7 @@ const About = () => {
         <>
             <Banner banner={aboutBanner} />
 
-            <div>
+            <div className='about-drop-container'>
                 {loaderData.map((data, index) => (
                     <Dropdown key={index} title={data.title} text={data.text} />
                 ))}

@@ -1,21 +1,23 @@
 @use '../abstract/_variables';
 
 .footer {
-    background-color: variables.$clr-quaternary;
-    color: variables.$clr-primary;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: variables.$clr-primary;
+    background-color: variables.$clr-quaternary;
 
     .footer-img {
-        width: 122px;
         height: 40px;
         margin: 66px 0 30px;
     }
 
     .footer-text {
-        font-size: 24px;
         margin-bottom: 30px;
+        font-size: 24px;
         font-weight: 500;
+        @media #{variables.$medium-down} {
+            font-size: 18px;
+        }
     }
 }

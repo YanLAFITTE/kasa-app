@@ -17,17 +17,13 @@ const About = () => {
         <>
             <Banner banner={aboutBanner} />
 
-            <div className='about-drop-container'>
+            <section className='about-drop-container'>
                 {loaderData.map((data, index) => (
-                    <div className='drop-about'>
-                        <Dropdown
-                            key={index}
-                            title={data.title}
-                            text={data.text}
-                        />
+                    <div className='drop-about' key={`${data.id}-${index}`}>
+                        <Dropdown title={data.title} text={data.text} />
                     </div>
                 ))}
-            </div>
+            </section>
         </>
     );
 };

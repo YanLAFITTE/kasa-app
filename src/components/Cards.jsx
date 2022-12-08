@@ -7,20 +7,23 @@ import PropTypes from 'prop-types';
  * @returns cards elemets
  */
 
-const Cards = ({ cards }) => {
-    const cardsElements = cards.map((card) => (
-        <Link key={card.id} to={`${card.id.toString()}`}>
+const Cards = ({ card }) => {
+    return (
+        <Link to={`${card.id.toString()}`}>
             <div className='card'>
-                <img className='card-img' src={card.cover} alt={card.id} />
+                <img
+                    className='card-img'
+                    src={card.cover}
+                    alt={card.location}
+                />
                 <h3 className='card-title'>{card.title}</h3>
             </div>
         </Link>
-    ));
-    return cardsElements;
+    );
 };
 
 Cards.propTypes = {
-    cards: PropTypes.array.isRequired,
+    card: PropTypes.object.isRequired,
 };
 
 export default Cards;

@@ -17,7 +17,9 @@ const Home = () => {
             <Banner banner={homeBanner} text={true} />
             <section className='cards-container'>
                 <div className='cards'>
-                    <Cards cards={loaderData} />
+                    {loaderData.map((card) => (
+                        <Cards key={card.id} card={card} />
+                    ))}
                 </div>
             </section>
         </>

@@ -895,8 +895,20 @@ html {
 .dropdown .drop-p {
   font-weight: 400;
   line-height: 26px;
+  transform-origin: top center;
+  animation: displayDrop 150ms ease;
 }
 
+@keyframes displayDrop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .slider {
   position: relative;
 }

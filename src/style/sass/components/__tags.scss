@@ -3,10 +3,15 @@
 .tag-infos {
     background-color: variables.$clr-secondary;
     color: variables.$clr-primary;
-    padding: 2px 6px;
-    border-radius: 25px;
-    margin-right: 5px;
-    margin-top: 5px;
+    padding: 5px 2rem;
+    border-radius: 10px;
     display: inline-block;
     filter: contrast(110%);
+    font-size: 14px;
+    font-weight: 500;
+    @media #{variables.$small-down} {
+        font-size: 10px;
+        padding: 3px 1rem;
+        border-radius: 5px;
+    }
 }

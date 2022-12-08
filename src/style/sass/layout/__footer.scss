@@ -6,6 +6,7 @@
     align-items: center;
     color: variables.$clr-primary;
     background-color: variables.$clr-quaternary;
+    width: 100%;
 
     .footer-img {
         height: 40px;
@@ -18,6 +19,9 @@
         font-weight: 500;
         @media #{variables.$medium-down} {
             font-size: 18px;
+        }
+        @media #{variables.$small-down} {
+            font-size: 12px;
         }
     }
 }

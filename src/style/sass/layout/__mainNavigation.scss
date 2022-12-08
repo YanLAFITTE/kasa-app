@@ -4,25 +4,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
-    padding: 1rem;
-    max-width: 1240px;
+    width: 100%;
+    padding: 20px 40px;
+
+    max-width: 1280px;
     @media #{variables.$medium-down} {
-        padding: 0 1rem;
+        padding: 0 20px;
     }
 
     .header-img {
         height: 68px;
         @media #{variables.$medium-down} {
             height: 47px;
+            margin-right: 10px;
         }
     }
     .nav {
         display: flex;
+        align-items: center;
+        justify-content: flex-end;
         flex-direction: row;
         gap: 4rem;
         @media #{variables.$medium-down} {
+            gap: 2.5rem;
+        }
+        @media #{variables.$small-down} {
             gap: 1rem;
+            flex-wrap: wrap;
         }
     }
 
@@ -33,6 +41,9 @@
         filter: contrast(110%);
         @media #{variables.$medium-down} {
             font-size: 18px;
+        }
+        @media #{variables.$small-down} {
+            font-size: 12px;
         }
     }
 

@@ -1,10 +1,16 @@
 @use '../abstract/_variables';
 
 .star {
-    font-size: 28px;
+    font-size: 30px;
     color: variables.$clr-star;
+    @media #{variables.$small-down} {
+        font-size: 15px;
+    }
 }
 
 .star-active {
-    font-size: 28px;
+    font-size: 30px;
+    @media #{variables.$small-down} {
+        font-size: 15px;
+    }
 }

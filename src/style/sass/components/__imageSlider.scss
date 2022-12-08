@@ -2,83 +2,118 @@
 
 .slider {
     position: relative;
-    padding: 0 20px;
-
-    .slider-image {
-        //  max-width: 1024px;
-        margin: auto;
-        width: 100%;
-        height: 415px;
+}
+.slider-image {
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    object-fit: cover;
+    filter: brightness(105%);
+    @media #{variables.$medium-down} {
+        height: 320px;
+    }
+    @media #{variables.$small-down} {
+        height: 255px;
         border-radius: 10px;
-        object-fit: cover;
-        filter: brightness(105%);
+    }
+}
+
+.left-arrow {
+    position: absolute;
+    left: 20px;
+    top: 175px;
+    font-size: 79px;
+    color: variables.$clr-primary;
+    z-index: 10;
+    cursor: pointer;
+    &:hover {
+        color: variables.$clr-secondary;
+        transition: ease-out 150ms;
+    }
+    @media #{variables.$medium-down} {
+        top: 135px;
+        font-size: 60px;
+    }
+    @media #{variables.$small-down} {
+        top: 120px;
+        font-size: 20px;
+        left: 8px;
+    }
+}
+.rigth-arrow {
+    position: absolute;
+    right: 5px;
+    top: 175px;
+    font-size: 79px;
+    color: variables.$clr-primary;
+    z-index: 10;
+    cursor: pointer;
+    &:hover {
+        color: variables.$clr-secondary;
+        transition: ease-out 150ms;
+    }
+    @media #{variables.$medium-down} {
+        top: 135px;
+        font-size: 60px;
+    }
+    @media #{variables.$small-down} {
+        top: 120px;
+        font-size: 20px;
+        right: 8px;
+    }
+}
+
+.slide-inactive {
+    opacity: 0;
+    transition-duration: 0.5s ease;
+    transform: scale(0.95);
+}
+
+.slide-active {
+    opacity: 1;
+    transition: ease-out 500ms;
+    transform: scale(1);
+}
+
+.slider-bullets-index {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    bottom: 15px;
+    gap: 25px;
+    color: variables.$clr-primary;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    @media #{variables.$medium-down} {
+        font-size: 14px;
+        font-weight: 400;
+        gap: 15px;
+    }
+    @media #{variables.$small-down} {
+        gap: 5px;
+        bottom: 10px;
     }
 
-    .left-arrow {
-        position: absolute;
-        top: 12rem;
-        left: 1.5rem;
-        font-size: 4rem;
-        color: variables.$clr-primary;
-        z-index: 10;
-        cursor: pointer;
-        user-select: none;
-        filter: contrast(120%);
-        &:hover {
-            color: variables.$clr-secondary;
-            transition: ease-out 150ms;
+    .slider-bullets {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background-color: variables.$clr-primary;
+        border-radius: 5px;
+        @media #{variables.$medium-down} {
+            width: 9px;
+            height: 9px;
+        }
+        @media #{variables.$small-down} {
+            width: 4px;
+            height: 4px;
         }
     }
-    .rigth-arrow {
-        position: absolute;
-        top: 12rem;
-        right: 1.5rem;
-        font-size: 4rem;
-        color: variables.$clr-primary;
-        z-index: 10;
-        cursor: pointer;
-        user-select: none;
-        filter: contrast(120%);
-        &:hover {
-            color: variables.$clr-secondary;
-            transition: ease-out 150ms;
-        }
-    }
 
-    .slide-inactive {
-        opacity: 0;
-        transition-duration: 0.5s ease;
-    }
-
-    .slide-active {
-        opacity: 1;
-        transition-duration: 0.5s;
-        transform: scale(1.05);
-    }
-
-    .slider-bullets-index {
-        display: flex;
-        position: absolute;
-        bottom: 5px;
-        left: 45%;
-        right: 45%;
-        gap: 5%;
-        color: variables.$clr-primary;
-        font-size: 18px;
-        font-family: 'Montserrat';
-        font-weight: 600;
-
-        .slider-bullets {
-            width: 35px;
-            height: 5px;
-            background-color: variables.$clr-primary;
-            border-radius: 5px;
-            filter: contrast(120%);
-        }
-
-        .slider-bullet-active {
-            background-color: variables.$clr-secondary;
-            filter: contrast(120%);
-        }
+    .slider-bullet-active {
+        background-color: variables.$clr-secondary;
     }
 }

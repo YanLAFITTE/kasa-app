@@ -38,7 +38,7 @@ const ImagesSlider = ({ slides }) => {
     }
 
     return (
-        <section className='slider'>
+        <div className='slider'>
             {length > 1 && (
                 <>
                     <MdArrowBackIos
@@ -65,7 +65,7 @@ const ImagesSlider = ({ slides }) => {
                         {index === current && (
                             <img
                                 src={slide}
-                                alt='slider'
+                                alt='pictures slider'
                                 className='slider-image'
                             />
                         )}
@@ -78,7 +78,7 @@ const ImagesSlider = ({ slides }) => {
                     {bulletElements}
                 </div>
             )}
-        </section>
+        </div>
     );
 };
 

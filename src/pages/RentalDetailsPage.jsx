@@ -20,7 +20,8 @@ const RentalDetailsPage = () => {
     return (
         <>
             <ImagesSlider slides={currentRental.pictures} />
-            <div className='rental-infos'>
+
+            <section className='rental-infos'>
                 <div className='rental-infos-right'>
                     <div>
                         <h1 className='rental-infos-title'>
@@ -47,12 +48,12 @@ const RentalDetailsPage = () => {
                             alt='avatar'
                         />
                     </div>
-                    <div className='star-container'>
+                    <div className='stars-container'>
                         <Stars rating={currentRental.rating} />
                     </div>
                 </div>
-            </div>
-            <div className='drop-rental-container'>
+            </section>
+            <section className='drop-rental-container'>
                 <div className='drop-rental'>
                     <Dropdown
                         title={'Description'}
@@ -61,11 +62,11 @@ const RentalDetailsPage = () => {
                 </div>
                 <div className='drop-rental'>
                     <Dropdown
-                        title={'Equipements'}
+                        title={'Équipements'}
                         equipments={currentRental.equipments}
                     />
                 </div>
-            </div>
+            </section>
         </>
     );
 };

@@ -3,8 +3,33 @@
 .about-drop-container {
     max-width: 1024px;
     margin: auto;
-    padding: 2rem 3rem;
+    padding: 40px 0;
+    padding: 3rem 0;
     @media #{variables.$medium-down} {
-        padding: 1rem;
+        padding: 10px 0;
+    }
+}
+
+.drop-about {
+    margin: 1.5rem 0;
+    @media #{variables.$small-down} {
+        margin: 1rem 0;
+    }
+    .drop-btn {
+        height: 47px;
+        border-radius: 5px;
+        font-size: 24px;
+        @media #{variables.$small-down} {
+            height: 30px;
+            font-size: 13px;
+        }
+    }
+    .drop-p {
+        padding: 2rem 1rem 1rem;
+        font-size: 24px;
+        @media #{variables.$small-down} {
+            font-size: 12px;
+            padding: 1rem 1rem 1.5rem;
+        }
     }
 }

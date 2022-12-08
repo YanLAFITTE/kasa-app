@@ -1,13 +1,13 @@
 @use '../abstract/_variables';
 
 .cards-container {
+    margin: 3rem 0;
     padding: 3rem;
     background-color: variables.$clr-tertiary;
     border-radius: 25px;
-    margin: 2rem 1rem;
     @media #{variables.$medium-down} {
-        padding: 1rem;
-        margin: 0;
+        padding: 0;
+        margin: 2rem 0;
         border-radius: 0;
         background-color: variables.$clr-primary;
     }

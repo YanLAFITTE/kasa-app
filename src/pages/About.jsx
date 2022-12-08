@@ -19,7 +19,13 @@ const About = () => {
 
             <div className='about-drop-container'>
                 {loaderData.map((data, index) => (
-                    <Dropdown key={index} title={data.title} text={data.text} />
+                    <div className='drop-about'>
+                        <Dropdown
+                            key={index}
+                            title={data.title}
+                            text={data.text}
+                        />
+                    </div>
                 ))}
             </div>
         </>

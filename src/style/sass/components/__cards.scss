@@ -5,9 +5,11 @@
     height: 340px;
     position: relative;
     border-radius: 20px;
-    background-color: variables.$clr-secondary;
     @media #{variables.$medium-down} {
         height: 300px;
+    }
+    @media #{variables.$small-down} {
+        height: 255px;
     }
 
     .card-img {
@@ -17,13 +19,17 @@
         object-fit: cover;
         border-radius: 10px;
         filter: brightness(90%);
-        transition: ease-out 100ms;
+
         @media #{variables.$medium-down} {
             height: 300px;
         }
+        @media #{variables.$small-down} {
+            height: 255px;
+        }
         &:hover {
-            opacity: 0.9;
-            filter: brightness(95%);
+            transform: scale(1.01);
+            transition: ease-out 200ms;
+            filter: brightness(100%);
             @include mixins.card-shadow;
         }
     }
@@ -35,7 +41,7 @@
         bottom: 10px;
         left: 10px;
         margin: auto 0 auto;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 600;
         color: variables.$clr-primary;
         filter: brightness(140%);

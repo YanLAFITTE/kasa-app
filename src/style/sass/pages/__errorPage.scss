@@ -1,18 +1,47 @@
+@use '../abstract/_variables';
+
 .error-container {
     max-width: 1240px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
-
+    padding: 1rem;
     .error-title {
         font-size: 288px;
-        font-weight: 700;
+        margin-bottom: 66px;
+        @media #{variables.$large-down} {
+            font-size: 200px;
+            margin-bottom: 50px;
+        }
+        @media #{variables.$medium-down} {
+            margin-bottom: 0;
+        }
+        @media #{variables.$small-down} {
+            margin-top: 6rem;
+            font-size: 100px;
+        }
     }
 
     .error-paragraph {
+        margin-top: 169px;
+        margin-bottom: 182px;
         font-size: 36px;
         font-weight: 500;
+        line-height: 2rem;
+        @media #{variables.$large-down} {
+            margin-top: 100px;
+            font-size: 30px;
+        }
+        @media #{variables.$medium-down} {
+            margin-top: 80px;
+            margin-bottom: 100px;
+            font-size: 18px;
+        }
+        @media #{variables.$small-down} {
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
     }
 
     .error-link {
@@ -20,5 +49,9 @@
         text-decoration: underline;
         font-size: 18px;
         font-weight: 500;
+        margin-bottom: 159px;
+        @media #{variables.$small-down} {
+            font-size: 14px;
+        }
     }
 }

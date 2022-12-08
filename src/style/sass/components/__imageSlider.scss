@@ -98,14 +98,14 @@
     }
 
     .slider-bullets {
-        width: 11px;
-        height: 11px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background-color: variables.$clr-primary;
         border-radius: 5px;
         @media #{variables.$medium-down} {
-            width: 9px;
-            height: 9px;
+            width: 8px;
+            height: 8px;
         }
         @media #{variables.$small-down} {
             width: 4px;

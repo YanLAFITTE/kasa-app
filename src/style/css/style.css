@@ -673,7 +673,7 @@ html {
 }
 @media only screen and (max-width: 480px) {
   .error-container .error-title {
-    margin-top: 6rem;
+    margin-top: 195px;
     font-size: 100px;
   }
 }
@@ -686,21 +686,23 @@ html {
 }
 @media only screen and (max-width: 992px) {
   .error-container .error-paragraph {
-    margin-top: 100px;
     font-size: 30px;
   }
 }
 @media only screen and (max-width: 768px) {
   .error-container .error-paragraph {
-    margin-top: 80px;
-    margin-bottom: 100px;
+    margin-top: 145px;
     font-size: 18px;
   }
 }
 @media only screen and (max-width: 480px) {
   .error-container .error-paragraph {
-    font-size: 14px;
-    margin-bottom: 40px;
+    margin-top: 19px;
+    font-size: 18px;
+    margin-bottom: 125px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 .error-container .error-link {

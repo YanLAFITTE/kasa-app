@@ -648,6 +648,47 @@ html {
   }
 }
 
+.about-drop-container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 40px 0;
+  padding: 3rem 0;
+}
+@media only screen and (max-width: 768px) {
+  .about-drop-container {
+    padding: 10px 0;
+  }
+}
+.about-drop-container .drop-about {
+  margin: 1.5rem 0;
+}
+@media only screen and (max-width: 480px) {
+  .about-drop-container .drop-about {
+    margin: 1rem 0;
+  }
+}
+.about-drop-container .drop-about .drop-btn {
+  height: 47px;
+  border-radius: 5px;
+  font-size: 24px;
+}
+@media only screen and (max-width: 480px) {
+  .about-drop-container .drop-about .drop-btn {
+    height: 30px;
+    font-size: 13px;
+  }
+}
+.about-drop-container .drop-about .drop-p {
+  padding: 2rem 1rem 1rem;
+  font-size: 24px;
+}
+@media only screen and (max-width: 480px) {
+  .about-drop-container .drop-about .drop-p {
+    font-size: 12px;
+    padding: 1rem 1rem 1.5rem;
+  }
+}
+
 .error-container {
   max-width: 1240px;
   display: flex;
@@ -718,47 +759,6 @@ html {
   }
 }
 
-.about-drop-container {
-  max-width: 1024px;
-  margin: auto;
-  padding: 40px 0;
-  padding: 3rem 0;
-}
-@media only screen and (max-width: 768px) {
-  .about-drop-container {
-    padding: 10px 0;
-  }
-}
-.about-drop-container .drop-about {
-  margin: 1.5rem 0;
-}
-@media only screen and (max-width: 480px) {
-  .about-drop-container .drop-about {
-    margin: 1rem 0;
-  }
-}
-.about-drop-container .drop-about .drop-btn {
-  height: 47px;
-  border-radius: 5px;
-  font-size: 24px;
-}
-@media only screen and (max-width: 480px) {
-  .about-drop-container .drop-about .drop-btn {
-    height: 30px;
-    font-size: 13px;
-  }
-}
-.about-drop-container .drop-about .drop-p {
-  padding: 2rem 1rem 1rem;
-  font-size: 24px;
-}
-@media only screen and (max-width: 480px) {
-  .about-drop-container .drop-about .drop-p {
-    font-size: 12px;
-    padding: 1rem 1rem 1.5rem;
-  }
-}
-
 .banner {
   position: relative;
   display: flex;
@@ -806,6 +806,12 @@ html {
 @media only screen and (max-width: 768px) {
   .banner .text-banner {
     font-size: 24px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner .text-banner {
+    display: flex;
+    flex-direction: column;
   }
 }
 

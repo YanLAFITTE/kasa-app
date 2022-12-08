@@ -20,7 +20,6 @@ const RentalDetailsPage = () => {
     return (
         <>
             <ImagesSlider slides={currentRental.pictures} />
-
             <section className='rental-infos'>
                 <div className='rental-infos-right'>
                     <div>

@@ -1,5 +1,7 @@
 @use '../abstract/_variables';
 
+// Banner component
+
 .banner {
     position: relative;
     display: flex;
@@ -42,6 +44,10 @@
         }
         @media #{variables.$medium-down} {
             font-size: 24px;
+        }
+        @media #{variables.$small-down} {
+            display: flex;
+            flex-direction: column;
         }
     }
 }

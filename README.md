@@ -1,6 +1,33 @@
-# Getting Started with Create React App
+# Kasa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [OpenClassRooms](https://openclassrooms.com/fr/paths/717-developpeur-web) project 7
+
+### A real estate rental web application
+
+### Made by Yan Lafitte
+
+### Develop with :
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+
+---
+
+![preview](./public/kasa-app-screen.png)
+
+---
+
+## Start the project :
+
+-   Clone the repo or download the zip file
+-   Install dependencies : `npm install`
+-   Run project : `npm start`
+-   You should be able to see the app in your browser : http://localhost:3000/
+
+### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+---
 
 ## Available Scripts
 

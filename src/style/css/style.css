@@ -501,13 +501,14 @@ html {
 }
 
 .rental-infos {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
 }
 @media only screen and (max-width: 768px) {
   .rental-infos {
     flex-direction: column;
+    margin-top: 1rem;
   }
 }
 .rental-infos .rental-infos-right {
@@ -518,17 +519,20 @@ html {
 .rental-infos .rental-infos-right .rental-infos-title {
   font-size: 36px;
   font-weight: 500;
+  line-height: 51px;
   margin: 0 0 5px 0;
   filter: contrast(110%);
 }
 @media only screen and (max-width: 768px) {
   .rental-infos .rental-infos-right .rental-infos-title {
     font-size: 28px;
+    line-height: 40px;
   }
 }
 @media only screen and (max-width: 480px) {
   .rental-infos .rental-infos-right .rental-infos-title {
     font-size: 18px;
+    line-height: 25px;
   }
 }
 .rental-infos .rental-infos-right .rental-infos-location {
@@ -545,7 +549,7 @@ html {
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 10px;
 }
 .rental-infos .rental-infos-left {
   display: flex;
@@ -562,7 +566,7 @@ html {
   font-weight: 500;
   max-width: 93px;
   text-align: end;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
   margin-right: 1rem;
   filter: contrast(110%);
   filter: contrast(110%);
@@ -603,7 +607,7 @@ html {
 
 .drop-rental-container {
   display: flex;
-  gap: 5%;
+  gap: 6%;
   margin: 2rem 0;
 }
 .drop-rental-container .drop-rental {
@@ -629,15 +633,16 @@ html {
 }
 .drop-rental-container .drop-rental .drop-p {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   padding: 2rem 1rem;
+  line-height: 26px;
 }
 @media only screen and (max-width: 480px) {
   .drop-rental-container .drop-rental .drop-p {
     padding: 1rem;
     padding-bottom: 5px;
     font-size: 12px;
-    font-weight: 400;
+    line-height: 17px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -662,6 +667,11 @@ html {
 .about-drop-container .drop-about {
   margin: 1.5rem 0;
 }
+@media only screen and (min-width: 1440px) {
+  .about-drop-container .drop-about {
+    margin: 2rem 0;
+  }
+}
 @media only screen and (max-width: 480px) {
   .about-drop-container .drop-about {
     margin: 1rem 0;
@@ -671,6 +681,7 @@ html {
   height: 47px;
   border-radius: 5px;
   font-size: 24px;
+  font-weight: 500;
 }
 @media only screen and (max-width: 480px) {
   .about-drop-container .drop-about .drop-btn {
@@ -681,9 +692,11 @@ html {
 .about-drop-container .drop-about .drop-p {
   padding: 2rem 1rem 1rem;
   font-size: 24px;
+  line-height: 34px;
 }
 @media only screen and (max-width: 480px) {
   .about-drop-container .drop-about .drop-p {
+    line-height: 18px;
     font-size: 12px;
     padding: 1rem 1rem 1.5rem;
   }
@@ -1072,21 +1085,23 @@ html {
 }
 
 .star {
+  padding: 0 2px;
   font-size: 30px;
   color: #e3e3e3;
 }
 @media only screen and (max-width: 480px) {
   .star {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
 .star-active {
+  padding: 0 2px;
   font-size: 30px;
 }
 @media only screen and (max-width: 480px) {
   .star-active {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 

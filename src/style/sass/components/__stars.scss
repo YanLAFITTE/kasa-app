@@ -3,16 +3,18 @@
 // Star component
 
 .star {
+    padding: 0 2px;
     font-size: 30px;
     color: variables.$clr-star;
     @media #{variables.$small-down} {
-        font-size: 15px;
+        font-size: 18px;
     }
 }
 
 .star-active {
+    padding: 0 2px;
     font-size: 30px;
     @media #{variables.$small-down} {
-        font-size: 15px;
+        font-size: 18px;
     }
 }

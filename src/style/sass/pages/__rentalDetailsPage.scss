@@ -1,13 +1,14 @@
 @use '../abstract/_variables';
 
-// Infos details page 
+// Infos details page
 
 .rental-infos {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;
     @media #{variables.$medium-down} {
         flex-direction: column;
+        margin-top: 1rem;
     }
 
     .rental-infos-right {
@@ -17,13 +18,16 @@
         .rental-infos-title {
             font-size: 36px;
             font-weight: 500;
+            line-height: 51px;
             margin: 0 0 5px 0;
             filter: contrast(110%);
             @media #{variables.$medium-down} {
                 font-size: 28px;
+                line-height: 40px;
             }
             @media #{variables.$small-down} {
                 font-size: 18px;
+                line-height: 25px;
             }
         }
         .rental-infos-location {
@@ -38,7 +42,7 @@
             margin-top: 1rem;
             display: flex;
             flex-wrap: wrap;
-            gap: 5px;
+            gap: 10px;
         }
     }
     .rental-infos-left {
@@ -54,7 +58,7 @@
                 font-weight: 500;
                 max-width: 93px;
                 text-align: end;
-                line-height: 1.5rem;
+                line-height: 1.6rem;
                 margin-right: 1rem;
                 filter: contrast(110%);
                 filter: contrast(110%);
@@ -90,7 +94,7 @@
 
 .drop-rental-container {
     display: flex;
-    gap: 5%;
+    gap: 6%;
     margin: 2rem 0;
     .drop-rental {
         width: 50%;
@@ -111,13 +115,14 @@
         }
         .drop-p {
             font-size: 18px;
-            font-weight: 500;
+            font-weight: 400;
             padding: 2rem 1rem;
+            line-height: 26px;
             @media #{variables.$small-down} {
                 padding: 1rem;
                 padding-bottom: 5px;
                 font-size: 12px;
-                font-weight: 400;
+                line-height: 17px;
             }
         }
     }

@@ -951,27 +951,24 @@ html {
 .slider {
   position: relative;
 }
-
-.slider-image {
+.slider .slider-image {
   width: 100%;
   height: 415px;
   border-radius: 25px;
   object-fit: cover;
-  filter: brightness(105%);
 }
 @media only screen and (max-width: 768px) {
-  .slider-image {
+  .slider .slider-image {
     height: 320px;
   }
 }
 @media only screen and (max-width: 480px) {
-  .slider-image {
+  .slider .slider-image {
     height: 255px;
     border-radius: 10px;
   }
 }
-
-.left-arrow {
+.slider .left-arrow {
   position: absolute;
   left: 20px;
   top: 175px;
@@ -980,25 +977,24 @@ html {
   z-index: 10;
   cursor: pointer;
 }
-.left-arrow:hover {
+.slider .left-arrow:hover {
   color: #ff6060;
   transition: ease-out 150ms;
 }
 @media only screen and (max-width: 768px) {
-  .left-arrow {
+  .slider .left-arrow {
     top: 135px;
     font-size: 60px;
   }
 }
 @media only screen and (max-width: 480px) {
-  .left-arrow {
+  .slider .left-arrow {
     top: 120px;
     font-size: 20px;
     left: 8px;
   }
 }
-
-.rigth-arrow {
+.slider .rigth-arrow {
   position: absolute;
   right: 5px;
   top: 175px;
@@ -1007,37 +1003,34 @@ html {
   z-index: 10;
   cursor: pointer;
 }
-.rigth-arrow:hover {
+.slider .rigth-arrow:hover {
   color: #ff6060;
   transition: ease-out 150ms;
 }
 @media only screen and (max-width: 768px) {
-  .rigth-arrow {
+  .slider .rigth-arrow {
     top: 135px;
     font-size: 60px;
   }
 }
 @media only screen and (max-width: 480px) {
-  .rigth-arrow {
+  .slider .rigth-arrow {
     top: 120px;
     font-size: 20px;
     right: 8px;
   }
 }
-
-.slide-inactive {
+.slider .slide-inactive {
   opacity: 0;
   transition-duration: 0.5s ease;
   transform: scale(0.95);
 }
-
-.slide-active {
+.slider .slide-active {
   opacity: 1;
   transition: ease-out 500ms;
   transform: scale(1);
 }
-
-.slider-bullets-index {
+.slider .slider-bullets-index {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1051,19 +1044,19 @@ html {
   font-weight: 600;
 }
 @media only screen and (max-width: 768px) {
-  .slider-bullets-index {
+  .slider .slider-bullets-index {
     font-size: 14px;
     font-weight: 400;
     gap: 15px;
   }
 }
 @media only screen and (max-width: 480px) {
-  .slider-bullets-index {
+  .slider .slider-bullets-index {
     gap: 5px;
     bottom: 10px;
   }
 }
-.slider-bullets-index .slider-bullets {
+.slider .slider-bullets-index .slider-bullets {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -1071,18 +1064,18 @@ html {
   border-radius: 5px;
 }
 @media only screen and (max-width: 768px) {
-  .slider-bullets-index .slider-bullets {
+  .slider .slider-bullets-index .slider-bullets {
     width: 8px;
     height: 8px;
   }
 }
 @media only screen and (max-width: 480px) {
-  .slider-bullets-index .slider-bullets {
+  .slider .slider-bullets-index .slider-bullets {
     width: 4px;
     height: 4px;
   }
 }
-.slider-bullets-index .slider-bullet-active {
+.slider .slider-bullets-index .slider-bullet-active {
   background-color: #ff6060;
 }
 

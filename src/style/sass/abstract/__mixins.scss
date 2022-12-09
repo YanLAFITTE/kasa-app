@@ -1,6 +1,6 @@
 @use '../abstract/_variables';
 
-// Card shadow
+/*  Card shadow */
 
 @mixin card-shadow {
     box-shadow: 0 4px 10px variables.$card-shadow;

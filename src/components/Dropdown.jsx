@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 
 /**
  *
- * @param {*} props create dropdown component
+ * @param {*} props create drop-down component
  * @returns dropdown
  */
+
+/** Uses state to keep drop-down menus open or closed, in order to make a conditional rendering */
 
 const Dropdown = ({ title, text, equipments }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +34,8 @@ const Dropdown = ({ title, text, equipments }) => {
         </div>
     );
 };
+
+/** PropTypes ensure the typing of the data */
 
 Dropdown.propTypes = {
     title: PropTypes.string.isRequired,

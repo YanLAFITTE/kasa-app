@@ -12,6 +12,8 @@ import RentalDetailsPage, {
 } from './pages/RentalDetailsPage';
 import RootLayout from './pages/RootLayout';
 
+/**  Create a router constant whith react-router-dom 6.4.4 version */
+
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/' element={<RootLayout />} errorElement={<ErrorPage />}>
@@ -25,6 +27,8 @@ const router = createBrowserRouter(
         </Route>
     )
 );
+
+/**  Router constant is added to the router provider which is export */
 
 const Router = () => {
     return <RouterProvider router={router} />;

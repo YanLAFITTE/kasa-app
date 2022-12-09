@@ -7,6 +7,11 @@ import PropTypes from 'prop-types';
  * @returns stars
  */
 
+/**
+ *  Create an array of 5 stars wich is browsed in order to render each elements
+ *  Rating determines classe of the stars in order to apply desired color
+ */
+
 const Stars = ({ rating }) => {
     const totalStars = 5;
     const starRating = parseInt(rating);
@@ -21,6 +26,8 @@ const Stars = ({ rating }) => {
 
     return starElements;
 };
+
+/** PropTypes ensure the typing of the data */
 
 Stars.propTypes = {
     rating: PropTypes.string.isRequired,

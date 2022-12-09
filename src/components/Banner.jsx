@@ -23,6 +23,8 @@ const Banner = ({ banner, text }) => {
     );
 };
 
+/** PropTypes ensure the typing of the data */
+
 Banner.prototype = {
     banner: PropTypes.string.isRequired,
     text: PropTypes.bool,

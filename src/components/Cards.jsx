@@ -14,13 +14,15 @@ const Cards = ({ card }) => {
                 <img
                     className='card-img'
                     src={card.cover}
-                    alt={card.location}
+                    alt={card.id}
                 />
                 <h3 className='card-title'>{card.title}</h3>
             </div>
         </Link>
     );
 };
+
+/** PropTypes ensure the typing of the data */
 
 Cards.propTypes = {
     card: PropTypes.object.isRequired,

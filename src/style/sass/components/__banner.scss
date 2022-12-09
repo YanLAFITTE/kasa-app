@@ -1,12 +1,15 @@
 @use '../abstract/_variables';
 
-// Banner component
+/*  Banner component */
 
 .banner {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media #{variables.$small-down} {
+        justify-content: flex-start;
+    }
     .home-banner-img,
     .about-banner-img {
         height: 223px;
@@ -21,7 +24,7 @@
             height: 160px;
         }
         @media #{variables.$medium-down} {
-            height: 110px;
+            height: 111px;
             border-radius: 10px;
         }
     }
@@ -46,6 +49,7 @@
             font-size: 24px;
         }
         @media #{variables.$small-down} {
+            padding-left: 16px;
             display: flex;
             flex-direction: column;
         }

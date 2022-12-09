@@ -6,6 +6,8 @@ import MainNavigation from '../components/MainNavigation';
  * @returns  error page
  */
 
+/** When exceptions are thrown in loaders the error path is render and the error is available with "useRouteError" */
+
 const ErrorPage = () => {
     const error = useRouteError();
     console.log(error);

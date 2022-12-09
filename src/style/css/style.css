@@ -311,6 +311,9 @@ template {
   display: none;
 }
 
+/*  Colors */
+/*  Media queries */
+/*  Card shadow */
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -464,6 +467,7 @@ html {
   }
 }
 
+/*  Home page */
 .cards-container {
   margin: 3rem 0;
   padding: 3rem;
@@ -486,7 +490,7 @@ html {
 @media only screen and (max-width: 768px) {
   .cards {
     margin: 10px 0;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -500,6 +504,7 @@ html {
   }
 }
 
+/* Rental details page */
 .rental-infos {
   margin-top: 1.5rem;
   display: flex;
@@ -557,6 +562,14 @@ html {
   align-items: flex-end;
   justify-content: space-between;
 }
+@media only screen and (max-width: 768px) {
+  .rental-infos .rental-infos-left {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+}
 .rental-infos .rental-infos-left .name-image-infos {
   display: flex;
   align-items: center;
@@ -585,14 +598,6 @@ html {
 @media only screen and (max-width: 480px) {
   .rental-infos .rental-infos-left .name-image-infos .image-infos {
     height: 32px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .rental-infos .rental-infos-left {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
   }
 }
 .rental-infos .stars-container {
@@ -653,6 +658,7 @@ html {
   }
 }
 
+/*  About page */
 .about-drop-container {
   max-width: 1024px;
   margin: auto;
@@ -702,6 +708,7 @@ html {
   }
 }
 
+/*  Error page */
 .error-container {
   max-width: 1240px;
   display: flex;
@@ -745,8 +752,12 @@ html {
 }
 @media only screen and (max-width: 768px) {
   .error-container .error-paragraph {
-    margin-top: 145px;
-    font-size: 18px;
+    margin-top: 105px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5rem;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -754,9 +765,7 @@ html {
     margin-top: 19px;
     font-size: 18px;
     margin-bottom: 125px;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
+    line-height: 26px;
   }
 }
 .error-container .error-link {
@@ -772,11 +781,17 @@ html {
   }
 }
 
+/*  Banner component */
 .banner {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 480px) {
+  .banner {
+    justify-content: flex-start;
+  }
 }
 .banner .home-banner-img,
 .banner .about-banner-img {
@@ -794,7 +809,7 @@ html {
 }
 @media only screen and (max-width: 768px) {
   .banner .home-banner-img {
-    height: 110px;
+    height: 111px;
     border-radius: 10px;
   }
 }
@@ -823,11 +838,13 @@ html {
 }
 @media only screen and (max-width: 480px) {
   .banner .text-banner {
+    padding-left: 16px;
     display: flex;
     flex-direction: column;
   }
 }
 
+/*  Card component */
 .card {
   height: 340px;
   position: relative;
@@ -870,7 +887,7 @@ html {
 .card .card-title {
   position: absolute;
   border-radius: 20px;
-  padding: 5px;
+  padding: 6px;
   bottom: 10px;
   left: 10px;
   margin: auto 0 auto;
@@ -880,6 +897,7 @@ html {
   filter: brightness(140%);
 }
 
+/*  Dropdown component */
 .dropdown {
   background-color: #f7f7f7;
   border-radius: 10px;
@@ -888,6 +906,7 @@ html {
   background-color: #ff6060;
   width: 100%;
   color: #f7f7f7;
+  filter: contrast(110%);
   text-align: start;
   padding-left: 18px;
   border: none;
@@ -928,6 +947,7 @@ html {
     opacity: 1;
   }
 }
+/* Slider component */
 .slider {
   position: relative;
 }
@@ -1066,6 +1086,7 @@ html {
   background-color: #ff6060;
 }
 
+/*  Tag component */
 .tag-infos {
   background-color: #ff6060;
   color: #ffffff;
@@ -1084,6 +1105,7 @@ html {
   }
 }
 
+/*  Star component */
 .star {
   padding: 0 2px;
   font-size: 30px;

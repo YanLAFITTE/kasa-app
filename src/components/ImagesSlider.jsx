@@ -8,6 +8,12 @@ import PropTypes from 'prop-types';
  * @returns image slider
  */
 
+/**
+ *  The "slides" images array is browsed to display the first photo (the state of "current" is initialized to 0)
+ *  Applied a class to images according to their index
+ *  The "nextSlide" and "prevSlide" functions allow to advance or rewind the current image
+ */
+
 const ImagesSlider = ({ slides }) => {
     const [current, setCurrent] = useState(0);
     const length = slides.length;
@@ -81,6 +87,8 @@ const ImagesSlider = ({ slides }) => {
         </div>
     );
 };
+
+/** PropTypes ensure the typing of the data */
 
 ImagesSlider.propTypes = {
     slides: PropTypes.array.isRequired,

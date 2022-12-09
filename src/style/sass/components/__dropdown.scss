@@ -1,6 +1,6 @@
 @use '../abstract/_variables';
 
-// Dropdown component
+/*  Dropdown component */
 
 .dropdown {
     background-color: variables.$clr-tertiary;
@@ -10,6 +10,7 @@
         background-color: variables.$clr-secondary;
         width: 100%;
         color: variables.$clr-tertiary;
+        filter: contrast(110%);
         text-align: start;
         padding-left: 18px;
         border: none;

@@ -1,7 +1,7 @@
 @use '../abstract/_variables';
 @use '../abstract/_mixins';
 
-// Card component
+/*  Card component */
 
 .card {
     height: 340px;
@@ -39,7 +39,7 @@
     .card-title {
         position: absolute;
         border-radius: 20px;
-        padding: 5px;
+        padding: 6px;
         bottom: 10px;
         left: 10px;
         margin: auto 0 auto;

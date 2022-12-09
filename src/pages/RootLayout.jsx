@@ -4,8 +4,10 @@ import { Outlet } from 'react-router-dom';
 
 /**
  *
- * @returns layout page
+ * @returns layout
  */
+
+/** Create the layout by adding header, footer and the children pages in "Outlet" */
 
 const RootLayout = () => {
     return (

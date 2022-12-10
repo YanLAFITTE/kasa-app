@@ -382,7 +382,7 @@ html {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px 40px 0;
   margin: 0 auto auto;
   max-width: 1280px;
 }
@@ -723,15 +723,18 @@ html {
   flex-direction: column;
   align-items: center;
   margin: auto;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 .error-container .error-title {
   font-size: 288px;
   margin-bottom: 66px;
+  margin-top: 169px;
+  line-height: 208px;
 }
 @media only screen and (max-width: 992px) {
   .error-container .error-title {
     font-size: 200px;
+    line-height: 144px;
     margin-bottom: 50px;
   }
 }
@@ -744,14 +747,14 @@ html {
   .error-container .error-title {
     margin-top: 195px;
     font-size: 100px;
+    line-height: 76px;
   }
 }
 .error-container .error-paragraph {
-  margin-top: 169px;
+  margin-top: 66px;
   margin-bottom: 182px;
   font-size: 36px;
   font-weight: 500;
-  line-height: 2rem;
 }
 @media only screen and (max-width: 992px) {
   .error-container .error-paragraph {

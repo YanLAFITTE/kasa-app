@@ -8,12 +8,15 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
-    padding: 1rem;
+    padding: 0 1rem;
     .error-title {
         font-size: 288px;
         margin-bottom: 66px;
+        margin-top: 169px;
+        line-height: 208px;
         @media #{variables.$large-down} {
             font-size: 200px;
+            line-height: 144px;
             margin-bottom: 50px;
         }
         @media #{variables.$medium-down} {
@@ -22,15 +25,15 @@
         @media #{variables.$small-down} {
             margin-top: 195px;
             font-size: 100px;
+            line-height: 76px;
         }
     }
 
     .error-paragraph {
-        margin-top: 169px;
+        margin-top: 66px;
         margin-bottom: 182px;
         font-size: 36px;
         font-weight: 500;
-        line-height: 2rem;
         @media #{variables.$large-down} {
             font-size: 30px;
         }

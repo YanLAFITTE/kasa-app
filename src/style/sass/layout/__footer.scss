@@ -12,11 +12,14 @@
 
     .footer-img {
         height: 40px;
-        margin: 66px 0 30px;
+        margin: 66px 0 0;
+        @media #{variables.$small-down} {
+            margin: 62px 0 0;
+        }
     }
 
     .footer-text {
-        margin-bottom: 30px;
+        margin: 30px 0;
         font-size: 24px;
         font-weight: 500;
         @media #{variables.$medium-down} {
@@ -24,6 +27,7 @@
         }
         @media #{variables.$small-down} {
             font-size: 12px;
+            margin: 30px 0 62px;
         }
     }
 }

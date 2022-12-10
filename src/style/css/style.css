@@ -373,6 +373,7 @@ html {
 @media only screen and (max-width: 768px) {
   .layout-main {
     padding: 0 20px;
+    min-height: 70vh;
   }
 }
 
@@ -449,10 +450,15 @@ html {
 }
 .footer .footer-img {
   height: 40px;
-  margin: 66px 0 30px;
+  margin: 66px 0 0;
+}
+@media only screen and (max-width: 480px) {
+  .footer .footer-img {
+    margin: 62px 0 0;
+  }
 }
 .footer .footer-text {
-  margin-bottom: 30px;
+  margin: 30px 0;
   font-size: 24px;
   font-weight: 500;
 }
@@ -464,6 +470,7 @@ html {
 @media only screen and (max-width: 480px) {
   .footer .footer-text {
     font-size: 12px;
+    margin: 30px 0 62px;
   }
 }
 
@@ -613,7 +620,14 @@ html {
 .drop-rental-container {
   display: flex;
   gap: 6%;
-  margin: 2rem 0;
+  margin: 2rem 0 3rem;
+}
+@media only screen and (max-width: 768px) {
+  .drop-rental-container {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
 }
 .drop-rental-container .drop-rental {
   width: 50%;
@@ -648,13 +662,6 @@ html {
     padding-bottom: 5px;
     font-size: 12px;
     line-height: 17px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .drop-rental-container {
-    flex-direction: column;
-    gap: 1rem;
-    margin: 1rem 0;
   }
 }
 

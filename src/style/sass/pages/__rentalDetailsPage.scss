@@ -95,7 +95,12 @@
 .drop-rental-container {
     display: flex;
     gap: 6%;
-    margin: 2rem 0;
+    margin: 2rem 0 3rem;
+    @media #{variables.$medium-down} {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 2rem 0;
+    }
     .drop-rental {
         width: 50%;
         @media #{variables.$medium-down} {
@@ -124,10 +129,5 @@
                 line-height: 17px;
             }
         }
-    }
-    @media #{variables.$medium-down} {
-        flex-direction: column;
-        gap: 1rem;
-        margin: 1rem 0;
     }
 }

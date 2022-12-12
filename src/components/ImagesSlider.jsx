@@ -33,7 +33,7 @@ const ImagesSlider = ({ slides }) => {
         autoplaySpeed: 5000,
         nextArrow: <SampleNextArrow />,
         prevArrow: <PrevArrow />,
-        responsive: [{ breakpoint: 768, settings: { fade: true } }],
+        responsive: [{ breakpoint: 768, settings: { fade: true, autoplay: false } }],
     };
 
     function SampleNextArrow(props) {

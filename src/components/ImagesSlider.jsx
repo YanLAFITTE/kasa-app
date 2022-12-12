@@ -34,6 +34,7 @@ const ImagesSlider = ({ slides }) => {
         lazyLoad: true,
         nextArrow: <SampleNextArrow />,
         prevArrow: <PrevArrow />,
+        responsive: [{ breakpoint: 768, settings: { fade: true } }],
     };
 
     function SampleNextArrow(props) {

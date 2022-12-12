@@ -29,11 +29,8 @@ const ImagesSlider = ({ slides }) => {
         slidesToScroll: 1,
         initialSlide: 1,
         swipeToSlide: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
         nextArrow: <SampleNextArrow />,
         prevArrow: <PrevArrow />,
-        responsive: [{ breakpoint: 768, settings: { fade: true } }],
     };
 
     function SampleNextArrow(props) {

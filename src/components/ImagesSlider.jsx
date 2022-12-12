@@ -23,7 +23,6 @@ const ImagesSlider = ({ slides }) => {
     }
 
     const settings = {
-        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -32,18 +31,9 @@ const ImagesSlider = ({ slides }) => {
         swipeToSlide: true,
         autoplay: true,
         autoplaySpeed: 5000,
-        fade: true,
+        lazyLoad: true,
         nextArrow: <SampleNextArrow />,
         prevArrow: <PrevArrow />,
-
-        appendDots: (dots) => (
-            <div className='slick-dots-container'>
-                <ul className='slick-dots' style={{ padding: '0 0 70px 0' }}>
-                    {' '}
-                    {dots}{' '}
-                </ul>
-            </div>
-        ),
     };
 
     function SampleNextArrow(props) {
@@ -67,9 +57,9 @@ const ImagesSlider = ({ slides }) => {
                                 alt='pictures slider'
                                 className='slider-image'
                             />
-                            {/* <div className='counter'>
+                            <div className='counter'>
                                 {index + 1}/{length}
-                            </div> */}
+                            </div>
                         </div>
                     );
                 })}

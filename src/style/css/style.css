@@ -1045,16 +1045,6 @@ html {
   }
 }
 
-.slick-dots li.slick-active button:before {
-  color: #ff6060 !important;
-  filter: contrast(120%);
-}
-@media only screen and (min-width: 768px) {
-  .slick-dots li.slick-active button:before {
-    font-size: 7px;
-  }
-}
-
 /*  Tag component */
 .tag-infos {
   background-color: #ff6060;

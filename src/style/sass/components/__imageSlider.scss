@@ -73,11 +73,3 @@
         display: none;
     }
 }
-
-.slick-dots li.slick-active button:before {
-    color: variables.$clr-secondary !important;
-    filter: contrast(120%);
-    @media #{variables.$medium-up} {
-        font-size: 7px;
-    }
-}

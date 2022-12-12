@@ -4,7 +4,6 @@
 
 .slider {
     position: relative;
-
     .slider-image {
         width: 100%;
         height: 415px;
@@ -18,7 +17,6 @@
             border-radius: 10px;
         }
     }
-
     .left-arrow {
         position: absolute;
         left: 20px;
@@ -63,59 +61,23 @@
             right: 8px;
         }
     }
+}
 
-    .slide-inactive {
-        opacity: 0;
-        transition-duration: 0.5s ease;
-        transform: scale(0.95);
+.counter {
+    color: variables.$clr-primary;
+    transform: translate(-50%, -50%);
+    padding: 0 0 10px 0;
+    margin: -20px 0 0 0;
+    font-size: 20px;
+    @media #{variables.$medium-down} {
+        display: none;
     }
+}
 
-    .slide-active {
-        opacity: 1;
-        transition: ease-out 500ms;
-        transform: scale(1);
-    }
-
-    .slider-bullets-index {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        bottom: 15px;
-        gap: 25px;
-        color: variables.$clr-primary;
-        font-size: 18px;
-        font-weight: 600;
-        font-family: 'Montserrat';
-        font-weight: 600;
-        @media #{variables.$medium-down} {
-            font-size: 14px;
-            font-weight: 400;
-            gap: 15px;
-        }
-        @media #{variables.$small-down} {
-            gap: 5px;
-            bottom: 10px;
-        }
-
-        .slider-bullets {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: variables.$clr-primary;
-            border-radius: 5px;
-            @media #{variables.$medium-down} {
-                width: 8px;
-                height: 8px;
-            }
-            @media #{variables.$small-down} {
-                width: 4px;
-                height: 4px;
-            }
-        }
-
-        .slider-bullet-active {
-            background-color: variables.$clr-secondary;
-        }
+.slick-dots li.slick-active button:before {
+    color: variables.$clr-secondary !important;
+    filter: contrast(120%);
+    @media #{variables.$medium-up} {
+        font-size: 7px;
     }
 }

@@ -1,6 +1,9 @@
-import { useState } from 'react';
 import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md';
 import PropTypes from 'prop-types';
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 
 /**
  *
@@ -9,81 +12,69 @@ import PropTypes from 'prop-types';
  */
 
 /**
- *  The "slides" images array is browsed to display the first photo (the state of "current" is initialized to 0)
- *  Applied a class to images according to their index
- *  The "nextSlide" and "prevSlide" functions allow to advance or rewind the current image
+ * React slick is a carousel component built with React.
+ * https://react-slick.neostack.com/
  */
 
 const ImagesSlider = ({ slides }) => {
-    const [current, setCurrent] = useState(0);
     const length = slides.length;
-
-    const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
-    };
-    const prevSlide = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1);
-    };
-
     if (!Array.isArray(slides) || length <= 0) {
         return null;
     }
 
-    let bulletElements;
-    if (current >= 0) {
-        bulletElements = slides.map((slide, index) => (
-            <span
-                className={
-                    index === current
-                        ? 'slider-bullet-active slider-bullets'
-                        : 'slider-bullets'
-                }
-                key={index}
-            ></span>
-        ));
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        swipeToSlide: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        fade: true,
+        lazyLoad: true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <PrevArrow />,
+
+        appendDots: (dots) => (
+            <div className='slick-dots-container'>
+                <ul className='slick-dots' style={{ padding: '0 0 70px 0' }}>
+                    {' '}
+                    {dots}{' '}
+                </ul>
+            </div>
+        ),
+    };
+
+    function SampleNextArrow(props) {
+        const { onClick } = props;
+        return <MdArrowForwardIos className='rigth-arrow' onClick={onClick} />;
+    }
+
+    function PrevArrow(props) {
+        const { onClick } = props;
+        return <MdArrowBackIos className='left-arrow' onClick={onClick} />;
     }
 
     return (
         <div className='slider'>
-            {length > 1 && (
-                <>
-                    <MdArrowBackIos
-                        className='left-arrow'
-                        onClick={prevSlide}
-                    />
-
-                    <MdArrowForwardIos
-                        className='rigth-arrow'
-                        onClick={nextSlide}
-                    />
-                </>
-            )}
-            {slides.map((slide, index) => {
-                return (
-                    <div
-                        className={
-                            index === current
-                                ? 'slide-active'
-                                : 'slide-inactive'
-                        }
-                        key={index}
-                    >
-                        {index === current && (
+            <Slider {...settings}>
+                {slides.map((slide, index) => {
+                    return (
+                        <div key={index}>
                             <img
                                 src={slide}
                                 alt='pictures slider'
                                 className='slider-image'
                             />
-                        )}
-                    </div>
-                );
-            })}
-            {length > 1 && (
-                <div className='slider-bullets-index'>
-                    {/* {current + 1}/{length} */}
-                    {bulletElements}
-                </div>
-            )}
+                            {/* <div className='counter'>
+                                {index + 1}/{length}
+                            </div> */}
+                        </div>
+                    );
+                })}
+            </Slider>
         </div>
     );
 };

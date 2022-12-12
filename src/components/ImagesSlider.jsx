@@ -31,7 +31,6 @@ const ImagesSlider = ({ slides }) => {
         swipeToSlide: true,
         autoplay: true,
         autoplaySpeed: 5000,
-        lazyLoad: true,
         nextArrow: <SampleNextArrow />,
         prevArrow: <PrevArrow />,
     };

@@ -1,7 +1,7 @@
 import { useLoaderData } from 'react-router-dom';
 import Banner from '../components/Banner';
 import Cards from '../components/Cards';
-import homeBanner from '../assets/banner-home.png';
+import homeBanner from '../assets/banner-home.webp';
 
 /**
  *

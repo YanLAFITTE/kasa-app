@@ -1,7 +1,6 @@
 import Banner from '../components/Banner';
 import Dropdown from '../components/Dropdown';
-import aboutBanner from '../assets/banner-about.png';
-// import { useFetch } from '../utils/useFetch';
+import aboutBanner from '../assets/banner-about.webp';
 import { useLoaderData } from 'react-router-dom';
 
 /**

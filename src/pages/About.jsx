@@ -1,7 +1,8 @@
 import Banner from '../components/Banner';
 import Dropdown from '../components/Dropdown';
 import aboutBanner from '../assets/banner-about.webp';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, Await } from 'react-router-dom';
+import { Suspense } from 'react';
 
 /**
  *
@@ -19,21 +20,28 @@ const About = () => {
 
     return (
         <>
-            <Banner banner={aboutBanner} />
+            <Suspense fallback={<div>Loading...</div>}>
+                <Await>
+                    <Banner banner={aboutBanner} />
 
-            <section className='about-drop-container'>
-                {loaderData.map((data, index) => (
-                    <div className='drop-about' key={`${data.id}-${index}`}>
-                        <Dropdown title={data.title} text={data.text} />
-                    </div>
-                ))}
-            </section>
+                    <section className='about-drop-container'>
+                        {loaderData.map((data, index) => (
+                            <div
+                                className='drop-about'
+                                key={`${data.id}-${index}`}
+                            >
+                                <Dropdown title={data.title} text={data.text} />
+                            </div>
+                        ))}
+                    </section>
+                </Await>
+            </Suspense>
         </>
     );
 };
 
 export default About;
 
-export function loader() {
-    return fetch(window.location.origin + '/aboutData.json');
+export async function loader() {
+    return await( fetch(window.location.origin + '/aboutData.json'));
 }

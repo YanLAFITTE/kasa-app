@@ -1,7 +1,8 @@
-import { useLoaderData } from 'react-router-dom';
 import Banner from '../components/Banner';
 import Cards from '../components/Cards';
 import homeBanner from '../assets/banner-home.webp';
+import { useLoaderData, Await } from 'react-router-dom';
+import { Suspense } from 'react';
 
 /**
  *
@@ -18,20 +19,25 @@ const Home = () => {
 
     return (
         <>
-            <Banner banner={homeBanner} text={true} />
-            <section className='cards-container'>
-                <div className='cards'>
-                    {loaderData.map((card) => (
-                        <Cards key={card.id} card={card} />
-                    ))}
-                </div>
-            </section>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Await>
+                    <Banner banner={homeBanner} text={true} />
+                    <section className='cards-container'>
+                        <div className='cards'>
+                            {loaderData.map((card) => (
+                                <Cards key={card.id} card={card} />
+                            ))}
+                        </div>
+                    </section>
+                </Await>
+            </Suspense>
         </>
     );
 };
 
 export default Home;
 
-export function loader() {
-    return fetch(window.location.origin + '/rentalsData.json');
+export async function loader() {
+    const dataLoad = fetch(window.location.origin + '/rentalsData.json');
+    return  await( dataLoad);
 }

@@ -4,26 +4,47 @@ import {
     createRoutesFromElements,
     Route,
 } from 'react-router-dom';
-import Home, { loader as homeLoader } from './pages/Home';
-import About, { loader as aboutLoader } from './pages/About';
+import Home from './pages/Home';
+import About from './pages/About';
 import ErrorPage from './pages/ErrorPage';
-import RentalDetailsPage, {
-    loader as rentalLoader,
-} from './pages/RentalDetailsPage';
+import RentalDetailsPage from './pages/RentalDetailsPage';
 import RootLayout from './pages/RootLayout';
 
-/**  Create a router constant whith react-router-dom 6.4.4 version */
+/**  Create a router constant whith react-router-dom 6.4.5 version
+ *   React-router-dom provides conventional data loading hooks to initiate data loading during a navigation
+ *   The "loader" function sends the data to the page
+ */
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/' element={<RootLayout />} errorElement={<ErrorPage />}>
-            <Route index element={<Home />} loader={homeLoader} />
+            <Route
+                index
+                element={<Home />}
+                loader={async () => {
+                    return await fetch(
+                        window.location.origin + '/rentalsData.json'
+                    );
+                }}
+            />
             <Route
                 path=':id'
                 element={<RentalDetailsPage />}
-                loader={rentalLoader}
+                loader={async () => {
+                    return await fetch(
+                        window.location.origin + '/rentalsData.json'
+                    );
+                }}
             />
-            <Route path='about' element={<About />} loader={aboutLoader} />
+            <Route
+                path='about'
+                element={<About />}
+                loader={async () => {
+                    return await fetch(
+                        window.location.origin + '/aboutData.json'
+                    );
+                }}
+            />
         </Route>
     )
 );

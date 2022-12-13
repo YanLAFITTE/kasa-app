@@ -1,7 +1,8 @@
 import Banner from '../components/Banner';
 import Cards from '../components/Cards';
 import homeBanner from '../assets/banner-home.webp';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, Await } from 'react-router-dom';
+import { Suspense } from 'react';
 
 /**
  *
@@ -10,7 +11,7 @@ import { useLoaderData } from 'react-router-dom';
 
 /**
  * React-router-dom provides conventional data loading hooks to initiate data loading during a navigation
- * The "loader" function sends the data to the router and "useloaderData" allows to load the data when browsing the page
+ * The "useloaderData" hook allows to load the data when browsing the page
  */
 const Home = () => {
     const loaderData = useLoaderData();
@@ -20,18 +21,18 @@ const Home = () => {
         <>
             <Banner banner={homeBanner} text={true} />
             <section className='cards-container'>
-                <div className='cards'>
-                    {loaderData.map((card) => (
-                        <Cards key={card.id} card={card} />
-                    ))}
-                </div>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Await>
+                        <div className='cards'>
+                            {loaderData.map((card) => (
+                                <Cards key={card.id} card={card} />
+                            ))}
+                        </div>
+                    </Await>
+                </Suspense>
             </section>
         </>
     );
 };
 
 export default Home;
-
-export async function loader() {
-    return await fetch(window.location.origin + '/rentalsData.json');
-}

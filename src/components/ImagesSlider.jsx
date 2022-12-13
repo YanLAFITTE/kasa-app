@@ -27,7 +27,7 @@ const ImagesSlider = ({ slides }) => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 1,
+        initialSlide: -1,
         swipeToSlide: true,
         nextArrow: <SampleNextArrow />,
         prevArrow: <PrevArrow />,

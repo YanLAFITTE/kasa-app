@@ -5,10 +5,12 @@ import {
     Route,
 } from 'react-router-dom';
 import Home from './pages/Home';
+import RentalDetailsPage from './pages/RentalDetailsPage';
 import About from './pages/About';
 import ErrorPage from './pages/ErrorPage';
-import RentalDetailsPage from './pages/RentalDetailsPage';
 import RootLayout from './pages/RootLayout';
+import aboutData from './data/aboutData.json';
+import rentalData from './data/rentalsData.json';
 
 /**  Create a router constant whith react-router-dom 6.4.5 version
  *   React-router-dom provides conventional data loading hooks to initiate data loading during a navigation
@@ -21,28 +23,23 @@ const router = createBrowserRouter(
             <Route
                 index
                 element={<Home />}
-                loader={async () => {
-                    return await fetch(
-                        window.location.origin + '/rentalsData.json'
-                    );
+                loader={() => {
+                    return rentalData;
                 }}
             />
+
             <Route
                 path=':id'
                 element={<RentalDetailsPage />}
-                loader={async () => {
-                    return await fetch(
-                        window.location.origin + '/rentalsData.json'
-                    );
+                loader={() => {
+                    return rentalData;
                 }}
             />
             <Route
                 path='about'
                 element={<About />}
-                loader={async () => {
-                    return await fetch(
-                        window.location.origin + '/aboutData.json'
-                    );
+                loader={() => {
+                    return aboutData;
                 }}
             />
         </Route>

@@ -14,10 +14,6 @@
 
 ---
 
-![preview](./public/kasa-app-screen.png)
-
----
-
 ## Start the project
 
 -   Clone the repo or download the zip file
@@ -26,6 +22,10 @@
 -   You should be able to see the app in your browser : http://localhost:3000/
 
 ### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+---
+
+![preview](./public/kasa-app-screen.webp)
 
 ---
 

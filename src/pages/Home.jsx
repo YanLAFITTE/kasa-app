@@ -1,8 +1,7 @@
 import Banner from '../components/Banner';
 import Cards from '../components/Cards';
 import homeBanner from '../assets/banner-home.webp';
-import { useLoaderData, Await } from 'react-router-dom';
-import { Suspense } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 /**
  *
@@ -21,15 +20,11 @@ const Home = () => {
         <>
             <Banner banner={homeBanner} text={true} />
             <section className='cards-container'>
-                <Suspense fallback={<div>Loading...</div>}>
-                    <Await>
-                        <div className='cards'>
-                            {loaderData.map((card) => (
-                                <Cards key={card.id} card={card} />
-                            ))}
-                        </div>
-                    </Await>
-                </Suspense>
+                <div className='cards'>
+                    {loaderData.map((card) => (
+                        <Cards key={card.id} card={card} />
+                    ))}
+                </div>
             </section>
         </>
     );

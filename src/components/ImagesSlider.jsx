@@ -29,11 +29,11 @@ const ImagesSlider = ({ slides }) => {
         slidesToScroll: 1,
         initialSlide: -1,
         swipeToSlide: true,
-        nextArrow: <SampleNextArrow />,
+        nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
     };
 
-    function SampleNextArrow(props) {
+    function NextArrow(props) {
         const { onClick } = props;
         return <MdArrowForwardIos className='rigth-arrow' onClick={onClick} />;
     }

@@ -29,7 +29,6 @@ const router = createBrowserRouter(
                     return rentalData;
                 }}
             />
-
             <Route
                 path=':id'
                 element={<RentalDetailsPage />}

@@ -908,6 +908,10 @@ html {
 }
 
 /*  Dropdown component */
+.drop-open {
+  height: 100%;
+}
+
 .dropdown {
   background-color: #f7f7f7;
   border-radius: 10px;

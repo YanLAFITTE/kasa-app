@@ -17,7 +17,7 @@ const Dropdown = ({ title, text, equipments }) => {
     };
 
     return (
-        <div className='dropdown'>
+        <div className={isOpen ? 'dropdown drop-open' : 'dropdown'}>
             <button className='drop-btn' onClick={handleOpen}>
                 {title}
                 {!isOpen && <IoChevronDown className='drop-icon' />}

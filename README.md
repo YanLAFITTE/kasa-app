@@ -25,7 +25,7 @@
 
 ---
 
-<img src="./public/kasa-app-screen.webp" height="350"/>
+<img src="./public/kasa-app-screen.webp" height="400"/>
 
 ---
 

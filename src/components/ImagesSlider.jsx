@@ -1,6 +1,5 @@
 import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md';
 import PropTypes from 'prop-types';
-
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
@@ -27,19 +26,16 @@ const ImagesSlider = ({ slides }) => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: -1,
         swipeToSlide: true,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
     };
 
-    function NextArrow(props) {
-        const { onClick } = props;
+    function NextArrow({ onClick }) {
         return <MdArrowForwardIos className='rigth-arrow' onClick={onClick} />;
     }
 
-    function PrevArrow(props) {
-        const { onClick } = props;
+    function PrevArrow({ onClick }) {
         return <MdArrowBackIos className='left-arrow' onClick={onClick} />;
     }
 
@@ -55,7 +51,7 @@ const ImagesSlider = ({ slides }) => {
                                 className='slider-image'
                             />
                             <div className='counter'>
-                                {index + 1}/{length}
+                                {index === 0 ? length : index}/{length}
                             </div>
                         </div>
                     );

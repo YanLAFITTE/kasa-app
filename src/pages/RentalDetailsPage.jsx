@@ -1,9 +1,8 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useLoaderData } from 'react-router-dom';
 import ImagesSlider from '../components/ImagesSlider';
 import Dropdown from '../components/Dropdown';
 import Tags from '../components/Tags';
 import Stars from '../components/Stars';
-import { useLoaderData } from 'react-router-dom';
 
 /**
  *

@@ -10,7 +10,11 @@ const MainNavigation = () => {
     return (
         <header className='header'>
             <h1>
-                <img className='header-img' src={logoHeader} alt='logo coloré de kasa' />
+                <img
+                    className='header-img'
+                    src={logoHeader}
+                    alt='logo coloré de kasa'
+                />
             </h1>
 
             <div>

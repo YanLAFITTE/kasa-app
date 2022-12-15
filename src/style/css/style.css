@@ -590,7 +590,6 @@ html {
   line-height: 1.6rem;
   margin-right: 1rem;
   filter: contrast(110%);
-  filter: contrast(110%);
 }
 @media only screen and (max-width: 480px) {
   .rental-infos .rental-infos-left .name-image-infos .name-infos {

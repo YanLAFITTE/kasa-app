@@ -1,6 +1,5 @@
 import Banner from '../components/Banner';
 import Dropdown from '../components/Dropdown';
-import aboutBanner from '../assets/banner-about.webp';
 import { useLoaderData } from 'react-router-dom';
 
 /**
@@ -13,13 +12,13 @@ import { useLoaderData } from 'react-router-dom';
  * The "useloaderData" hook allows to load the data when browsing the page
  */
 
-const About = () => {
+const About = ({ banner }) => {
     const loaderData = useLoaderData();
     document.title = '- KASA - A propos';
 
     return (
         <>
-            <Banner banner={aboutBanner} />
+            <Banner banner={banner} />
             <section className='about-drop-container'>
                 {loaderData.map((data, index) => (
                     <div className='drop-about' key={`${data.id}-${index}`}>

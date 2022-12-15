@@ -11,6 +11,8 @@ import ErrorPage from './pages/ErrorPage';
 import RootLayout from './pages/RootLayout';
 import aboutData from './data/aboutData.json';
 import rentalData from './data/rentalsData.json';
+import homeBanner from './assets/banner-home.webp';
+import aboutBanner from './assets/banner-about.webp';
 
 /**  Create a router constant whith react-router-dom 6.4.5 version
  *   React-router-dom provides conventional data loading hooks to initiate data loading during a navigation
@@ -22,7 +24,7 @@ const router = createBrowserRouter(
         <Route path='/' element={<RootLayout />} errorElement={<ErrorPage />}>
             <Route
                 index
-                element={<Home />}
+                element={<Home banner={homeBanner} />}
                 loader={() => {
                     return rentalData;
                 }}
@@ -37,7 +39,7 @@ const router = createBrowserRouter(
             />
             <Route
                 path='about'
-                element={<About />}
+                element={<About banner={aboutBanner} />}
                 loader={() => {
                     return aboutData;
                 }}

@@ -1,6 +1,5 @@
 import Banner from '../components/Banner';
 import Cards from '../components/Cards';
-import homeBanner from '../assets/banner-home.webp';
 import { useLoaderData } from 'react-router-dom';
 
 /**
@@ -12,13 +11,14 @@ import { useLoaderData } from 'react-router-dom';
  * React-router-dom provides conventional data loading hooks to initiate data loading during a navigation
  * The "useloaderData" hook allows to load the data when browsing the page
  */
-const Home = () => {
+
+const Home = ({ banner }) => {
     const loaderData = useLoaderData();
     document.title = '- KASA - Accueil';
 
     return (
         <>
-            <Banner banner={homeBanner} text={true} />
+            <Banner banner={banner} text={true} />
             <section className='cards-container'>
                 <div className='cards'>
                     {loaderData.map((card) => (

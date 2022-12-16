@@ -972,7 +972,6 @@ html {
   height: 415px;
   border-radius: 25px;
   object-fit: cover;
-  cursor: grab;
 }
 @media only screen and (max-width: 768px) {
   .slider .slider-image {

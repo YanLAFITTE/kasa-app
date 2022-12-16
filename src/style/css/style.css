@@ -359,6 +359,7 @@ html {
   color: #ff6060;
 }
 
+/* Layout page */
 .layout {
   display: flex;
   flex-direction: column;
@@ -377,6 +378,7 @@ html {
   }
 }
 
+/* Header navigation element */
 .header {
   display: flex;
   justify-content: space-between;
@@ -440,6 +442,7 @@ html {
   text-decoration: underline;
 }
 
+/* Footer */
 .footer {
   display: flex;
   flex-direction: column;
@@ -670,7 +673,6 @@ html {
   max-width: 1024px;
   margin: auto;
   padding: 40px 0;
-  padding: 3rem 0;
 }
 @media only screen and (max-width: 768px) {
   .about-drop-container {
@@ -970,6 +972,7 @@ html {
   height: 415px;
   border-radius: 25px;
   object-fit: cover;
+  cursor: grab;
 }
 @media only screen and (max-width: 768px) {
   .slider .slider-image {
@@ -1083,11 +1086,14 @@ html {
 .star-active {
   padding: 0 2px;
   font-size: 30px;
+  color: #ff6060;
 }
 @media only screen and (max-width: 480px) {
   .star-active {
     font-size: 18px;
   }
 }
+
+/* Main SASS */
 
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@ import ImagesSlider from '../components/ImagesSlider';
 import Dropdown from '../components/Dropdown';
 import Tags from '../components/Tags';
 import Stars from '../components/Stars';
+import ErrorElement from '../components/ErrorElement';
 
 /**
  *
@@ -18,7 +19,9 @@ const RentalDetailsPage = () => {
     const loaderData = useLoaderData();
     const { id } = useParams();
     const currentRental = loaderData.find((el) => el.id === id);
-
+    if (!currentRental) {
+        return <ErrorElement />;
+    }
     document.title = '- KASA - ' + currentRental.title;
 
     return (

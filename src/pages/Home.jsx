@@ -1,6 +1,7 @@
 import Banner from '../components/Banner';
 import Cards from '../components/Cards';
 import { useLoaderData } from 'react-router-dom';
+import ErrorElement from '../components/ErrorElement';
 
 /**
  *
@@ -14,6 +15,9 @@ import { useLoaderData } from 'react-router-dom';
 
 const Home = ({ banner }) => {
     const loaderData = useLoaderData();
+    if (!loaderData) {
+        return <ErrorElement />;
+    }
     document.title = '- KASA - Accueil';
 
     return (

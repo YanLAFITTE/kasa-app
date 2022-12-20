@@ -1,6 +1,7 @@
 import Banner from '../components/Banner';
 import Dropdown from '../components/Dropdown';
 import { useLoaderData } from 'react-router-dom';
+import ErrorElement from '../components/ErrorElement';
 
 /**
  *
@@ -15,7 +16,9 @@ import { useLoaderData } from 'react-router-dom';
 const About = ({ banner }) => {
     const loaderData = useLoaderData();
     document.title = '- KASA - A propos';
-
+    if (!loaderData) {
+        return <ErrorElement />;
+    }
     return (
         <>
             <Banner banner={banner} />
